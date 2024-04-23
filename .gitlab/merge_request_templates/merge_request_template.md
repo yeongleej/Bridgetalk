@@ -12,4 +12,4 @@
 ## Opinions 🗣️
 
 ## Issue numbers and link 🚪
-Closes #{issue number}
+Close #{issue number}
