@@ -1,5 +1,6 @@
-package com.ssafy.bridgetalkback.parent.domain;
+package com.ssafy.bridgetalkback.parents.repository;
 
+import com.ssafy.bridgetalkback.parents.domain.Parents;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
