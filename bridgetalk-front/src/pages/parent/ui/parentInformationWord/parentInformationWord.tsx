@@ -1,14 +1,3 @@
-import { ParentBackButton } from '@/shared';
-import * as S from '@/styles/parent/common.style';
-import { useNavigate } from 'react-router-dom';
-
-export function ParentInformationWord() {
-    const navigate = useNavigate();
-
-    return (
-        <div>
-            <ParentBackButton path="../information" navigate={navigate} />
-            ParentInformationWord
-        </div>
-    );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aca5c81e1659efa334a96e32345eb3f4938b320100689905d6801d8a2c3386a2
+size 1792

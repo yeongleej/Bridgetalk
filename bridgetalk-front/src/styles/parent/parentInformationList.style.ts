@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { ReportContainer, color } from '@/styles/parent/common.style';
+import { CommonContainer, color } from '@/styles/parent/common.style';
 
 export const Container = styled.div`
-    ${ReportContainer}
+    ${CommonContainer}
 `;
 
 export const ContentContainer = styled.div`
