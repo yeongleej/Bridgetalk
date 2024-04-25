@@ -1,11 +1,3 @@
-package com.ssafy.bridgetalkback.parents.repository;
-
-import com.ssafy.bridgetalkback.parents.domain.Email;
-import com.ssafy.bridgetalkback.parents.domain.Parents;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.UUID;
-
-public interface ParentsRepository extends JpaRepository<Parents, UUID> {
-    boolean existsParentsByParentsEmail(Email email);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:51551c874919fce8ba2ade6991652744dac3cd08b8c1112fa4dbd138570b8622
+size 668
