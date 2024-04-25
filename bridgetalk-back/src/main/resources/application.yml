@@ -1,0 +1,23 @@
+spring:
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: dialect=org.hibernate.dialect.MySQL8Dialect
+
+  profiles:
+    include: secret
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${EC2_HOST}:3306/${DATABASE_NAME}
+    username: ${EC2_USERNAME}
+    password: ${EC2_PASSWORD}
+
+
+
