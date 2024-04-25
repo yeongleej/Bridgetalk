@@ -1,17 +1,3 @@
-package com.ssafy.bridgetalkback.auth.exception;
-
-import com.ssafy.bridgetalkback.global.exception.ErrorCode;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-
-@Getter
-@RequiredArgsConstructor
-public enum AuthErrorCode implements ErrorCode {
-    DUPLICATE_EMAIL(HttpStatus.BAD_REQUEST, "AUTH_001", "이미 가입된 이메일입니다.")
-    ;
-
-    private final HttpStatus status;
-    private final String errorCode;
-    private final String message;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:42f84551ba445120fe14ee6a38e882cee32e5fe153ded91a30642f569d6ea06a
+size 1193
