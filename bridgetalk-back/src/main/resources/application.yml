@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1dd907902a62f3ed617d69f878315623411e962839c29a27e9cd175289a11d79
-size 920
+spring:
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: dialect=org.hibernate.dialect.MySQL8Dialect
+
+  profiles:
+    include: secret
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${EC2_HOST}:3306/${DATABASE_NAME}
+    username: ${EC2_USERNAME}
+    password: ${EC2_PASSWORD}
+
+
+
