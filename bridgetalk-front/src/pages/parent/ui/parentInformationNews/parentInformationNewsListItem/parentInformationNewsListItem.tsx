@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 interface Props {
     newsId: number;
     newsTitle: string;
@@ -5,10 +7,12 @@ interface Props {
 }
 
 export function ParentInformationNewsListItem({ newsId, newsTitle, newsDescription }: Props) {
+    const navigate = useNavigate();
+
     return (
-        <div>
+        <button onClick={() => navigate(`${newsId}`)}>
             <div>{newsTitle}</div>
             <div>{newsDescription}</div>
-        </div>
+        </button>
     );
 }
