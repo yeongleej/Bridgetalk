@@ -13,3 +13,10 @@ spring:
     hikari:
       jdbc-url: jdbc:h2:mem:testdb;MODE=MYSQL
       username: sa
+
+
+
+  data:
+    redis:
+      host: localhost
+      port: 16379
