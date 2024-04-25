@@ -19,5 +19,10 @@ spring:
     username: ${EC2_USERNAME}
     password: ${EC2_PASSWORD}
 
-
+  cache:
+    type: redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
 
