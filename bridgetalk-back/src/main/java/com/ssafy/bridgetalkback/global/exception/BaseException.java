@@ -1,17 +1,3 @@
-package com.ssafy.bridgetalkback.global.exception;
-
-import lombok.Getter;
-
-@Getter
-public class BaseException extends RuntimeException{
-    private final ErrorCode code;
-
-    public BaseException(ErrorCode code) {
-        super(code.getMessage());
-        this.code = code;
-    }
-
-    public static BaseException type(ErrorCode code) {
-        return new BaseException(code);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:895026aefb1436881fca140d9422cbcbebc9edf30971434e50ae3e0b005215bd
+size 383

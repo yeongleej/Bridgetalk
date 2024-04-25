@@ -1,13 +1,3 @@
-package com.ssafy.bridgetalkback;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class BridgetalkBackApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(BridgetalkBackApplication.class, args);
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:907920881fb266889a2cc6e55d8e50c7eb803dda6c88eab6e6c3377bba6fdb9d
+size 333
