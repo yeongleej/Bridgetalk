@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:181382c1404ce49d6c3516569166e81dd006499868e7a0e9918182414ad2a323
-size 37
+rootProject.name = 'bridgetalk-back'

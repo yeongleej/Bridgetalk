@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9050330c565b3f3045916b7685762b9760d6d47b0c2ad5ea702ad79cc9bd8ac2
-size 258
+package com.ssafy.bridgetalkback.kids.repository;
+
+import com.ssafy.bridgetalkback.kids.domain.Kids;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.UUID;
+
+public interface KidsRepository extends JpaRepository<Kids, UUID> {
+}
