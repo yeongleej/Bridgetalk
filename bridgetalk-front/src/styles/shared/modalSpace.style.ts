@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color } from '../parent/common.style';
+import { CommonContainer, color } from '../parent/common.style';
 
 export const Container = styled.div`
     position: fixed;
@@ -14,4 +14,11 @@ export const Container = styled.div`
     align-items: center;
 
     background-color: ${color(0.7).dark};
+`;
+
+export const AudioContainer = styled.div`
+    width: 50svw;
+    height: 50svh;
+    background-color: ${color(0.8).sub};
+    ${CommonContainer}
 `;
