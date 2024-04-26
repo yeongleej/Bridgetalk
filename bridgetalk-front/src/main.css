@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overscroll-behavior-y: contain; /* 폰에서 아래로 드래그했을 때 새로고침 방지 */
+}
