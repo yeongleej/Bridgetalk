@@ -1,13 +1,3 @@
-import styled from 'styled-components';
-
-export const Background = styled.div`
-    background-image: url('/assets/img/parent_bg.png');
-    background-size: cover;
-    background-position-x: 30%;
-    width: 100svw;
-    height: 100svh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ef3bb2285165a40de0cc0cc2d92cd5b15e1518a911933468d710498cc480778
+size 311

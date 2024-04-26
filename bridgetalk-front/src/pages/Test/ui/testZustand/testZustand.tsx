@@ -1,13 +1,3 @@
-import { useCountStore } from '@/pages/Test/store';
-
-export function TeestZustand() {
-    const { count, increase, decrease } = useCountStore();
-
-    return (
-        <>
-            <div style={{ color: 'white' }}>{count}</div>
-            <button onClick={increase}>증가</button>
-            <button onClick={decrease}>감소</button>
-        </>
-    );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a64c43e05db766fcfa318f767b61cc9fd5d36c739790916e3c8b69496d4923b
+size 359
