@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8d17b13146f0bd518a146e276ce9c063f29950e60ece8157a8b4e7ad262a7565
-size 332
+import styled from 'styled-components';
+import { CommonContainer, color } from '@/styles/parent/common.style';
+
+export const Container = styled.div`
+    ${CommonContainer}
+`;
+
+export const ContentContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+
+    gap: 2svw;
+
+    width: 100%;
+    height: 100%;
+`;
