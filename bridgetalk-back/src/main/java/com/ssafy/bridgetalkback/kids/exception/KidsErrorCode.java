@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:288f514c469e72ce3b8b1bd6e34619fb8060b8253f9b2bbd4da3023ff33e997b
-size 512
+package com.ssafy.bridgetalkback.kids.exception;
+
+import com.ssafy.bridgetalkback.global.exception.ErrorCode;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+
+@Getter
+@RequiredArgsConstructor
+public enum KidsErrorCode implements ErrorCode {
+    KIDS_NOT_FOUND(HttpStatus.NOT_FOUND, "KIDS_001", "아이 정보를 찾을 수 없습니다.")
+    ;
+
+    private final HttpStatus status;
+    private final String errorCode;
+    private final String message;
+}

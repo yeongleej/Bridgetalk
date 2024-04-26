@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:12b4078c2e77281b59df826135f5c3bd9eb9841d8dd5e63075deb7f1061d34ee
-size 318
+package com.ssafy.bridgetalkback.global.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target(ElementType.PARAMETER)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface ExtractToken {
+}
+
