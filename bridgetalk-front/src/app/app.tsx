@@ -5,6 +5,7 @@ import { ModalSpace } from '@/shared';
 export function App() {
     return (
         <S.Container>
+            <S.GlobalStyle />
             <AppRoutes />
             <ModalSpace />
         </S.Container>
