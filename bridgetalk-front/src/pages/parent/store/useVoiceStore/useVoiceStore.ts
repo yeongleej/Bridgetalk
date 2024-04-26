@@ -1,15 +1,3 @@
-import { create } from 'zustand';
-
-interface Store {
-    audioURL: string;
-    setAudioURL: (audioURL: string) => void;
-    volume: number;
-    setVolume: (volume: number) => void;
-}
-
-export const useVoiceStore = create<Store>()((set) => ({
-    audioURL: '',
-    setAudioURL: (audioURL: string) => set({ audioURL: audioURL }),
-    volume: 0,
-    setVolume: (volume: number) => set({ volume: volume }),
-}));
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b9082fc612a2feba72aff3230cd67ec56b59abcdfe0b90685655b1147e2c068
+size 604
