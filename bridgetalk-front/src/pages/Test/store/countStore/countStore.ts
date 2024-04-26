@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f21fcc133b4b57e41526b220f35eabb0924eb7eb8655bc4f39421fb219fb9603
-size 335
+import { create } from 'zustand';
+
+interface Store {
+    count: number;
+    increase: () => void;
+    decrease: () => void;
+}
+
+export const useCountStore = create<Store>()((set) => ({
+    count: 1,
+    increase: () => set((state) => ({ count: state.count + 1 })),
+    decrease: () => set((state) => ({ count: state.count - 1 })),
+}));
