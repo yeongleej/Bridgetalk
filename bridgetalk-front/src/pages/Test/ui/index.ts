@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c193ea2a3da90b9973715e4a826cf8b6a9f0c4a7b231ddabd43a906544772674
-size 375
+export * from '@/pages/Test/ui/test/Test';
+export * from '@/pages/Test/ui/testCamera/testCamera';
+export * from '@/pages/Test/ui/testDraw/testDraw';
+export * from '@/pages/Test/ui/testPuzzle/testPuzzle';
+export * from '@/pages/Test/ui/testVoice/testVoice';
+export * from '@/pages/Test/ui/testWordcloud/testWordcloud';
+export * from '@/pages/Test/ui/testZustand/testZustand';
