@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ff98bd3cd0ff9101606026a2de5e8781cc830b7224a999c299743e188c4387dd
-size 170
+body {
+    overscroll-behavior-y: contain; /* 폰에서 아래로 드래그했을 때 새로고침 방지 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

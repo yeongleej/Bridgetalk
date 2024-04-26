@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:043bd40b5f3f789c2daa6774cf77677d0c8d49b633574b5946729c8a8b89d186
-size 214
+import { ChildrenProps } from '@/shared';
+import * as S from '@/styles/test/testPage.style';
+
+export function TestPage({ children }: ChildrenProps) {
+    return <S.TestPageWrapper>{children}</S.TestPageWrapper>;
+}
