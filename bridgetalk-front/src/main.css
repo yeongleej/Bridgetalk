@@ -10,10 +10,10 @@ body {
 
 @font-face {
     font-family: CherryBomb;
-    src: url('./fonts/CherryBombOne-Regular.ttf');
+    src: url('@/fonts/CherryBombOne-Regular.ttf');
 }
 
 @font-face {
     font-family: DNF;
-    src: url('./fonts/DNFForgedBlade-Bold.ttf');
+    src: url('@/fonts/DNFForgedBlade-Bold.ttf');
 }
