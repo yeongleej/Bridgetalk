@@ -8,10 +8,7 @@ module.exports = merge(common, {
     devServer: {
         historyApiFallback: true,
         hot: true,
+        port: 3000,
     },
-    plugins: [
-        // new webpack.DefinePlugin({
-        //     'process.env': JSON.stringify(process.env),
-        // }),
-    ],
+    plugins: [],
 });
