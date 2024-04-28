@@ -1,16 +1,3 @@
-package com.ssafy.bridgetalkback.letters.exception;
-
-import com.ssafy.bridgetalkback.global.exception.ErrorCode;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-
-@Getter
-@RequiredArgsConstructor
-public enum LettersErrorCode implements ErrorCode {
-    LETTERS_NOT_FOUND(HttpStatus.NOT_FOUND,"COMMON-ERR-404","편지를 찾을 수 없습니다.");
-
-    private final HttpStatus status;
-    private final String errorCode;
-    private final String message;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe0ee5fa6eeb4bef55284ec2ca79f0829609374d92e2995a5eb9025b261a741f
+size 601
