@@ -1,4 +1,4 @@
-package com.ssafy.bridgetalkback.letters.dto.request;
+package com.ssafy.bridgetalkback.letters.dto.response;
 
 import software.amazon.awssdk.services.transcribe.model.TranscriptionJobStatus;
 
