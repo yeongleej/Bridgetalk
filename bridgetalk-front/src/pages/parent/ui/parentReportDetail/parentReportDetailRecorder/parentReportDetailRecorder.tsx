@@ -1,13 +1,3 @@
-import * as S from '@/styles/parent/parentReportDetailRecorder.style';
-import { memo } from 'react';
-
-export const ParentReportDetailRecorder = memo(() => {
-    return (
-        <S.Container>
-            <div>음량표시</div>
-            <div>음량표시공룡</div>
-            <div>녹음시간</div>
-            <button>녹음버튼</button>
-        </S.Container>
-    );
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:fdddb2467186c00d36d4f188990b4d2ee0aa87f83e18fe922d4ec3c77e7ab74b
+size 2784
