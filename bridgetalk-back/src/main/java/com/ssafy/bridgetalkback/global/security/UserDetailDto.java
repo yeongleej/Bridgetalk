@@ -1,11 +1,3 @@
-package com.ssafy.bridgetalkback.global.security;
-
-import java.util.UUID;
-
-public record UserDetailDto(
-        UUID uuid,
-        String email,
-        String name,
-        String role
-) {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:57069907146bfd5da574bab9bc919882357e85748268f66d852be27397f3a63c
+size 192
