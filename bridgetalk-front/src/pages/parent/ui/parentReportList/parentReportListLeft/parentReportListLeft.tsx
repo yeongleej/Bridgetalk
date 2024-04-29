@@ -1,12 +1,3 @@
-import * as S from '@/styles/parent/parentReportListLeft.style';
-import { ParentReportListGraph } from '../parentReportListGraph/parentReportListGraph';
-import { ParentReportListWordcloud } from '../parentReportListWordcloud/parentReportListWordcloud';
-
-export function ParentReportListLeft() {
-    return (
-        <S.Container>
-            <ParentReportListWordcloud />
-            <ParentReportListGraph />
-        </S.Container>
-    );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e84d4fd0dbba6ebea0524138934069eb85ee6edd05cdf67193fae80972d2313
+size 442
