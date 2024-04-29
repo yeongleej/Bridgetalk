@@ -1,19 +1,3 @@
-import styled from 'styled-components';
-import { color } from '@/styles/parent/common.style';
-
-export const Container = styled.div`
-    display: flex;
-    background-color: ${color(1).sub};
-    padding: 0.5svw;
-`;
-
-export const Content = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
-
-export const ContentHeader = styled.div`
-    display: flex;
-`;
-
-export const ContentBody = styled.div``;
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c5fdc4e109689e6e2f8ea7f4cb11f48c518dff5ac9cf0a262d708508ec233ad
+size 1589
