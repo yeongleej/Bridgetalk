@@ -1,22 +1,3 @@
-spring:
-  h2:
-    console:
-      enabled: true
-
-  jpa:
-    show_sql: true
-    properties:
-      hibernate: dialect=org.hibernate.dialect.MySQL8Dialect
-      dialect:
-        storage_engine: innodb
-  datasource:
-    hikari:
-      jdbc-url: jdbc:h2:mem:testdb;MODE=MYSQL
-      username: sa
-  profiles:
-    include: secret
-
-  data:
-    redis:
-      host: localhost
-      port: 6379
+version https://git-lfs.github.com/spec/v1
+oid sha256:aae84a98c406260fb6096e0a72dac876139eea194e6e8df1448d868cec16940a
+size 378
