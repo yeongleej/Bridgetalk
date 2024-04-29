@@ -1,4 +1,4 @@
-import * as S from '@/styles/parent/parentInformationListLeft.style';
+import * as S from '@/styles/parent/parentReportListLeft.style';
 import { ParentReportListGraph } from '../parentReportListGraph/parentReportListGraph';
 import { ParentReportListWordcloud } from '../parentReportListWordcloud/parentReportListWordcloud';
 
