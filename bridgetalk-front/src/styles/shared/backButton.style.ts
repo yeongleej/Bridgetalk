@@ -9,5 +9,10 @@ export const Button = styled.button`
 
     position: fixed;
     top: 3svh;
-    left: 3svw;
+    left: 2.5svw;
+
+    img {
+        width: 3svw;
+        height: 3svw;
+    }
 `;
