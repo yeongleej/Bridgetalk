@@ -9,11 +9,11 @@ body {
 }
 
 @font-face {
-    font-family: CherryBomb;
-    src: url('@/fonts/CherryBombOne-Regular.ttf');
+    font-family: 'CherryBomb';
+    src: url('@/assets/fonts/CherryBombOne-Regular.ttf');
 }
 
 @font-face {
-    font-family: DNF;
-    src: url('@/fonts/DNFForgedBlade-Bold.ttf');
+    font-family: 'DNF';
+    src: url('@/assets/fonts/DNFBitBitv2.ttf');
 }
