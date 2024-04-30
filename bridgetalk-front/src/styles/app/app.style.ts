@@ -1,20 +1,3 @@
-import styled, { createGlobalStyle } from 'styled-components';
-
-export const Container = styled.div`
-    width: 100vw;
-    height: 100vh;
-`;
-
-export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'CherryBomb';
-    src: url('@/fonts/CherryBombOne-Regular.ttf') format('truetype'); /* 폰트 파일의 경로에 맞게 수정 */
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'DNF';
-    src: url('@/fonts/DNFForgedBlade-Bold.ttf')
-  }
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa70f67739577ed6da8197655803ca8fa1e78ba33ed269915902c4aa5f77ddee
+size 622
