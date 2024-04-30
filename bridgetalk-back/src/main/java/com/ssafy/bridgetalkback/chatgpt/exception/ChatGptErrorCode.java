@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:18c6a8aeeaa6578e80dc2633439395eaede5f950061c0031081900002686d473
-size 509
+package com.ssafy.bridgetalkback.chatgpt.exception;
+
+import com.ssafy.bridgetalkback.global.exception.ErrorCode;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+
+@Getter
+@RequiredArgsConstructor
+public enum ChatGptErrorCode implements ErrorCode {
+    CHATGPT_FAILED(HttpStatus.BAD_REQUEST, "GPT_001", "GPT API 호출 실패입니다.")
+    ;
+
+    private final HttpStatus status;
+    private final String errorCode;
+    private final String message;
+}
