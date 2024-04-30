@@ -5,14 +5,13 @@ import * as S from '@/styles/main/main.style';
 export function Main() {
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   navigate('start');
-  // }, []);
+  useEffect(() => {
+    navigate('start');
+  }, []);
 
   return (
     <S.Background>
       <Outlet />
-      <div>dsfsd</div>
     </S.Background>
   );
 }
