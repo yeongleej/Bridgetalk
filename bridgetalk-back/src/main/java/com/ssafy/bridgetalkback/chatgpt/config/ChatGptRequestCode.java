@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:09fbc213a1af95da5fe9b92eee7985cb303bd26f8482a9c0e2622260b688e470
-size 310
+package com.ssafy.bridgetalkback.chatgpt.config;
+
+public enum ChatGptRequestCode {
+    SUMMARY("summary"),
+    TRANSLATE("translate"),
+    CONVERSION("conversion");
+
+    private final String label;
+
+    private ChatGptRequestCode(String label) {
+        this.label = label;
+    }
+
+    public String label() {
+        return label;
+    }
+}
