@@ -2,6 +2,7 @@ package com.ssafy.bridgetalkback.chatgpt.config;
 
 public enum ChatGptRequestCode {
     SUMMARY("summary"),
+    TRANSLATE("translate"),
     CONVERSION("conversion");
 
     private final String label;
