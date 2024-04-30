@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cb7853abafea1c54a5cb3576fa7a05ddcb7d10f4f300b520252be506edf3a68b
-size 371
+package com.ssafy.bridgetalkback.letters.dto.response;
+
+/**
+ * TranslationResultsDTO : papago api responseDTO
+ * @param srcLangType : 원본 언어
+ * @param tarLangType : 번역본 언어
+ * @param translatedText : 번역본 텍스트
+ * */
+public record TranslationResultsDTO(
+        String srcLangType,
+        String tarLangType,
+        String translatedText
+) {
+}

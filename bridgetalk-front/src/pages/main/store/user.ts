@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:05fff06df2d012bd07b2b3450e6492d1cf27399b46c65dfffe55712ca5aa6234
-size 389
+import create from 'zustand';
+
+interface UserState {
+  userId: string;
+  userName: string;
+  userEmail: string;
+  userNickname: string;
+  userDino: string;
+  setUserData: (userData: any) => void;
+}
+
+export const useUserStore = create<UserState>((set) => ({
+  userId: '',
+  userName: '',
+  userEmail: '',
+  userNickname: '',
+  userDino: '',
+  setUserData: (userData) => set(userData),
+}));
