@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:065f202da963b3bcd77e024e6dc1e28974aaccd5c6f8fe4f94b195e32d73db9d
-size 605
+import { customAxios } from '@/shared';
+
+export function postVoiceBlob(reportId: number, voice: Blob) {
+  const formData = new FormData();
+
+  formData.append('reportsId', String(reportId));
+  formData.append('lettersFile', voice);
+
+  customAxios
+    .post('/letters/upload', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => console.log(err));
+}
