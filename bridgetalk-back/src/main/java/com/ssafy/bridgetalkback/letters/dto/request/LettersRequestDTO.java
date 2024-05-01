@@ -1,14 +1,3 @@
-package com.ssafy.bridgetalkback.letters.dto.request;
-
-import com.ssafy.bridgetalkback.letters.domain.Letters;
-import com.ssafy.bridgetalkback.parents.domain.Parents;
-import com.ssafy.bridgetalkback.reports.domain.Reports;
-import lombok.Builder;
-import org.springframework.web.multipart.MultipartFile;
-
-@Builder
-public record LettersRequestDTO(
-        Long reportsId,
-        MultipartFile lettersFile
-) {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2ac9850d224a7b7fa345c5cc98916c50e1a3e194b631656815d3f095e75ce88
+size 409
