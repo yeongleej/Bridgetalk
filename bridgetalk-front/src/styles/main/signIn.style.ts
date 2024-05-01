@@ -7,10 +7,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  .back {
-    ${backButton}
-  }
-
   .email,
   .password {
     display: flex;
