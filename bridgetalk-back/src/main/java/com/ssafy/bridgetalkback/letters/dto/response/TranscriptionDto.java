@@ -4,7 +4,7 @@ import software.amazon.awssdk.services.transcribe.model.TranscriptionJobStatus;
 
 import java.util.Map;
 
-public record TranscriptionDTO (
+public record TranscriptionDto(
         String jobName,
         Long accountId,
         TranscriptionJobStatus status,
