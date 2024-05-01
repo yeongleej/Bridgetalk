@@ -10,6 +10,6 @@ export const Wrapper = styled.button`
   border: none;
 
   img {
-    width: 5svw;
+    width: 8svw;
   }
 `;
