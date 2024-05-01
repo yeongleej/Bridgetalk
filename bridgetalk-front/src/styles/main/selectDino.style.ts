@@ -1,28 +1,3 @@
-import styled from 'styled-components';
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  .title {
-  }
-
-  .selectbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    &__content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
-  .buttons {
-    display: flex;
-  }
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b84a0f6e2bfcb989c13147240012a8c3d669f2602b8660e876897a92033718d
+size 1174
