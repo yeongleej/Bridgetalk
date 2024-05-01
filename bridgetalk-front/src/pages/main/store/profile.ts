@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:68e9e037e9bf9468ee410f046cabdc2c598eee3805f60d9791ecae36e3aef44d
-size 293
+import create from 'zustand';
+
+interface Profile {
+  userId: string;
+  userName: string;
+  userEmail: string;
+  userNickname: string;
+  userDino: string;
+}
+
+interface ProfileState {
+  profiles: Profile[];
+  setProfiles: (profiles: Profile[]) => void;
+}
+
+export const useProfileStore = create;
