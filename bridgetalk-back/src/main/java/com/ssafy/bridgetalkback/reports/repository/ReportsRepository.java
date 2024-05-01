@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:17cec96a967611941ae3e214a377da97efc91cafa027f39a48f28f2ebdfdd6fd
-size 421
+package com.ssafy.bridgetalkback.reports.repository;
+
+import com.ssafy.bridgetalkback.reports.domain.Reports;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface ReportsRepository extends JpaRepository<Reports, Long> {
+    Optional<Reports> findByReportsIdAndIsDeleted(Long reportsId, int isDeleted);
+}
