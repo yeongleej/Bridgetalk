@@ -1,18 +1,3 @@
-import styled from 'styled-components';
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2svh;
-
-  .name,
-  .nickname,
-  .password,
-  .passwordcheck,
-  .buttons {
-    display: flex;
-    gap: 2svw;
-  }
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:0959e5cae8dc60e09b6392610ac9b0eef8c5baeaa3518dc9ed603a3d4bfe3f80
+size 1127
