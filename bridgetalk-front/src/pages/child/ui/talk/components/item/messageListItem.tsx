@@ -1,9 +1,3 @@
-export function messageListItem() {
-  return (
-    <div className="messageListItem">
-      <div className="messageListItem__icon"></div>
-      <div className="messageListItem__title">message title</div>
-      <div className="messageListItem__date">YYYY년 m월 d일</div>
-    </div>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3dc903e83dfc53d8cd6f8531bdb329c2ec2a2a0b92efc04048acac21f016a21
+size 290
