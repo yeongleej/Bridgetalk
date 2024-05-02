@@ -1,4 +1,4 @@
-package com.ssafy.bridgetalkback.letters.dto.response;
+package com.ssafy.bridgetalkback.reports.dto.response;
 
 import software.amazon.awssdk.services.transcribe.model.TranscriptionJobStatus;
 
@@ -9,4 +9,5 @@ public record TranscriptionDto(
         Long accountId,
         TranscriptionJobStatus status,
         Map<String, Object> results
-) {}
+) {
+}
