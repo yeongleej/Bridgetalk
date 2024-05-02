@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:317e0b117e73760c340f06839b400fbdbc2bfeb190fc6ed146b0762119233a97
-size 327
+import { useEffect } from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
+import * as S from '@/styles/main/main.style';
+
+export function Main() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('start');
+  }, []);
+
+  return (
+    <S.Background>
+      <Outlet />
+    </S.Background>
+  );
+}
