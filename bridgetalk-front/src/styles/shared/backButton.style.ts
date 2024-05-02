@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0ecddee47c56ace5389fd6c0759c51665777b9e53f137871225bf6432e0354a0
-size 314
+import styled from 'styled-components';
+
+export const Button = styled.button`
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    position: fixed;
+    top: 3svh;
+    left: 2.5svw;
+
+    img {
+        width: 3svw;
+        height: 3svw;
+    }
+`;
