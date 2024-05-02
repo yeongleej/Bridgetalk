@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:08171bd72c1e05410a4be61bdd6b5d85635aedfad6dbe6b3a33dc512819991ee
-size 205
+import styled from 'styled-components';
+import { bg } from './common.style';
+
+export const Background = styled.div`
+  background-image: url('/assets/img/main_bg.png');
+  background-size: cover;
+  ${bg}
+`;
