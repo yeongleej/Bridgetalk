@@ -1,15 +1,3 @@
-import styled from 'styled-components';
-import { buttonNormal } from './common.style';
-
-export const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    gap: 10svw;
-
-    button {
-        img {
-            width: 100%;
-        }
-        ${buttonNormal}
-    }
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:e649321492eee9b7653a5eafcba25bdf18b2c5a42a0cb99a82993431dfb124fe
+size 285
