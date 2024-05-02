@@ -1,10 +1,3 @@
-package com.ssafy.bridgetalkback.reports.repository;
-
-import com.ssafy.bridgetalkback.kids.domain.Kids;
-import com.ssafy.bridgetalkback.reports.domain.Reports;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.UUID;
-
-public interface ReportsRepository extends JpaRepository<Reports, Long> {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:12745f89004f72547b6173177b0074048717dda8d08b9094f04c632bce8cf56a
+size 548
