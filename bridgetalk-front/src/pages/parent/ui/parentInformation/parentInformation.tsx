@@ -1,3 +1,3 @@
 export function ParentInformation() {
-    return <div>ParentInformation</div>;
+  return <div>ParentInformation</div>;
 }
