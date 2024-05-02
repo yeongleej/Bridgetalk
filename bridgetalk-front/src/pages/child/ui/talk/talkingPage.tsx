@@ -1,16 +1,3 @@
-export function talkingPage() {
-  return (
-    <div className="talking">
-      <div className="talking__header"></div>
-      <div className="talking__container">
-        <div className="talking__container-guide">
-          <p>user guide & state announcement</p>
-        </div>
-        <div className="talking__container-dino"></div>
-        <div className="talking__container-talk">
-          <p>dino's dialogue</p>
-        </div>
-      </div>
-    </div>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:88e67ffd9d20602126b7d58462c73e20d4f8163e8d10e791a46da64b46b892bd
+size 462

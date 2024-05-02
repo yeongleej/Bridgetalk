@@ -1,8 +1,3 @@
-export * from '@/pages/Test/ui/test/Test';
-export * from '@/pages/Test/ui/testCamera/testCamera';
-export * from '@/pages/Test/ui/testCharacter/testCharacter';
-export * from '@/pages/Test/ui/testDraw/testDraw';
-export * from '@/pages/Test/ui/testPuzzle/testPuzzle';
-export * from '@/pages/Test/ui/testVoice/testVoice';
-export * from '@/pages/Test/ui/testWordcloud/testWordcloud';
-export * from '@/pages/Test/ui/testZustand/testZustand';
+version https://git-lfs.github.com/spec/v1
+oid sha256:3907f1a294a0f60e9fedd1643417b0dce2513917cd9989c7a1d31192364bcc50
+size 436
