@@ -1,8 +1,6 @@
 package com.ssafy.bridgetalkback.auth.dto;
 
-import java.util.UUID;
-
-public record KidsSingupRequestDto(
+public record KidsSignupRequestDto(
         String parentsId,
         String kidsName,
         String kidsNickname,

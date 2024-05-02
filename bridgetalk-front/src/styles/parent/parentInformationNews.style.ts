@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import { CommonContainer } from './common.style';
 
 export const Container = styled.div`
-    ${CommonContainer}
+  ${CommonContainer}
 `;
 
 export const NewsList = styled.div`
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    width: 100%;
-    height: 100%;
-    gap: 2svw;
+  width: 100%;
+  height: 100%;
+  gap: 2svw;
 `;
