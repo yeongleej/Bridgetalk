@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0bc40b754e71c2c895b96c5eaab0c6ae335f5eba3a51aa042065adab55a228db
-size 278
+import styled from 'styled-components';
+import { backButton, color } from './common.style';
+
+export const Container = styled.div`
+  width: 100svw;
+  height: 100svh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: ${color(0.2).black};
+`;
