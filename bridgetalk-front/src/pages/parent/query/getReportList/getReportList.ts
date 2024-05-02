@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e4c14f4fb7f76639b743e6f3493a2c6248bb6ea656b6cf45dbf28300c5e29047
-size 421
+import { customAxios } from '@/shared';
+
+interface Language {
+  type: 'kor' | 'viet';
+}
+
+/**
+ * getReportList: 아이 속마음 분석 리포트 리스트 가져오기
+ * @param kidsId 'string'
+ * @param language 'kor' | 'viet'
+ * @returns
+ */
+export async function getReportList(kidsId: string, language: Language['type']) {
+  return customAxios.get(`/reports/${kidsId}/${language}`).catch((err) => console.log(err));
+}
