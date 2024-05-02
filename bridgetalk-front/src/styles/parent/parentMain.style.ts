@@ -12,17 +12,11 @@ export const Container = styled.div`
   height: 100svh;
 
   .logo {
-    /* position: fixed; */
-    top: 10.6svh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-
     img {
       width: 40svw;
-      height: 40svh;
     }
   }
+
   button {
     ${buttonNormal}
   }
