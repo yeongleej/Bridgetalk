@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:051ecd98ba63333921ee83450b469fa2076f4cdb4d3f475f606555113a2c4916
-size 526
+import * as S from '@/styles/parent/parentMain.style';
+import { useNavigate } from 'react-router-dom';
+
+export function ParentMain() {
+  const navigate = useNavigate();
+
+  return (
+    <S.Container>
+      <button onClick={() => navigate('../report')}>
+        <div>nỗi lòng con cái</div>
+      </button>
+      <div>DINO</div>
+      <button onClick={() => navigate('../information')}>
+        <div>lấy thông tin</div>
+      </button>
+    </S.Container>
+  );
+}

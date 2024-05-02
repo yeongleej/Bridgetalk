@@ -1,9 +1,9 @@
 import * as S from '@/styles/parent/parentInformationWord.style';
 
 interface Props {
-    kwordAbbreviation: string;
+  kwordAbbreviation: string;
 }
 
 export function ParentInformationWordListItem({ kwordAbbreviation }: Props) {
-    return <S.ItemWrapper>{kwordAbbreviation}</S.ItemWrapper>;
+  return <S.ItemWrapper>{kwordAbbreviation}</S.ItemWrapper>;
 }

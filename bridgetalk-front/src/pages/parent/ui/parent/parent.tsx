@@ -4,15 +4,15 @@ import { useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 export function Parent() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        navigate('main');
-    }, []);
+  useEffect(() => {
+    navigate('main');
+  }, []);
 
-    return (
-        <S.Background>
-            <Outlet />
-        </S.Background>
-    );
+  return (
+    <S.Background>
+      <Outlet />
+    </S.Background>
+  );
 }
