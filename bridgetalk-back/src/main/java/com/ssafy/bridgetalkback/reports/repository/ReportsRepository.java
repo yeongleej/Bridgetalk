@@ -1,15 +1,3 @@
-package com.ssafy.bridgetalkback.reports.repository;
-
-import com.ssafy.bridgetalkback.reports.domain.Reports;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
-
-public interface ReportsRepository extends JpaRepository<Reports, Long> {
-
-    List<Reports> findAllByKidsUuidAndIsDeleted(UUID kids_uuid, int isDeleted);
-
-    Optional<Reports> findReportsByReportsIdAndIsDeleted(Long reportsId, int isDeleted);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:12745f89004f72547b6173177b0074048717dda8d08b9094f04c632bce8cf56a
+size 548
