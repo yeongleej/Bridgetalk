@@ -1,4 +1,4 @@
-export function talkingPage() {
+export function TalkingPage() {
   return (
     <div className="talking">
       <div className="talking__header"></div>
