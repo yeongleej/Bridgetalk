@@ -4,7 +4,8 @@ public enum ChatGptRequestCode {
     SUMMARY("summary"),
     TRANSLATE("translate"),
     CONVERSION("conversion"),
-    KEYWORD("keyword");
+    KEYWORD("keyword"),
+    ANSWER("answer");
 
     private final String label;
 
