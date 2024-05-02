@@ -4,7 +4,7 @@ import { ParentReportListWordcloud } from '../parentReportListWordcloud/parentRe
 export function ParentReportListLeft() {
   return (
     <S.Container>
-      {/* <ParentReportListWordcloud /> */}
+      <ParentReportListWordcloud />
       {/* 24.05.02 렌더링 오류로 임시 주석 처리 */}
     </S.Container>
   );
