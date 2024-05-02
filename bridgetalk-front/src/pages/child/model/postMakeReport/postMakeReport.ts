@@ -3,7 +3,7 @@ import { customAxios } from '@/shared';
 export async function postMakeReport() {
   return customAxios
     .post(
-      `/reports/create-reports`,
+      `/reports`,
       {},
       {
         headers: {
