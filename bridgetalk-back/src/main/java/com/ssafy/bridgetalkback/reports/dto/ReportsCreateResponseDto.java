@@ -1,16 +1,17 @@
 package com.ssafy.bridgetalkback.reports.dto;
 
+import com.ssafy.bridgetalkback.reports.domain.Reports;
 import lombok.Builder;
-import lombok.Getter;
 
-@Getter
-public class ReportsCreateResponseDto {
+@Builder
+public record ReportsCreateResponseDto(Long reportsId) {
 
-    private final Long reportsId;
-
-    @Builder
-    public ReportsCreateResponseDto(Long reportsId) {
-        this.reportsId = reportsId;
+    public static ReportsCreateResponseDto fromReportsId(Reports reports) {
+        return ReportsCreateResponseDto.builder()
+                .reportsId(reports.getReportsId())
+                .build();
     }
 
+
 }
+
