@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7473f5038d4d074552b70829b59e917c6742d2fff66a2b66ab5c3c100c714ec0
-size 292
+/**
+ * 영문 1글자, 숫자 1글자 포함. 8자 ~ 20자. 특수문자(!@#$%^&*+=-) 포함 가능
+ * @param password
+ * @returns
+ */
+export function validatePassword(password: string) {
+  const regex = /^(?=.*[a-zA-Z])(?=.*\d)[A-Za-z\d!@#$%^&*+=-]{8,20}$/;
+  return regex.test(password);
+}
