@@ -1,7 +1,7 @@
 import { customAxios } from '@/shared';
 
-export async function postMakeReport() {
-  return customAxios
+export async function postMakeReport(setReportsId: any) {
+  customAxios
     .post(
       `/reports`,
       {},
@@ -11,5 +11,6 @@ export async function postMakeReport() {
         },
       },
     )
+    .then((res) => setReportsId(res.data.reportsId))
     .catch((err) => console.log(err));
 }
