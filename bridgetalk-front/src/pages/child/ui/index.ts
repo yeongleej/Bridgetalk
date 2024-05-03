@@ -1,1 +1,2 @@
-export * from '@/pages/child/ui/';
+export * from '@/pages/child/ui/talk/talkingPage';
+export * from '@/pages/child/ui/talk/messagePage';
