@@ -12,4 +12,19 @@ export const Background = styled.div`
   align-items: center;
 
   overflow: hidden;
+
+  .lang {
+    position: fixed;
+    top: 3svh;
+    right: 2svw;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    img {
+      width: 5svw;
+    }
+  }
 `;
