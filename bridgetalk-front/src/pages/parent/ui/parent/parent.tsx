@@ -1,18 +1,3 @@
-import * as S from '@/styles/parent/parent.style';
-
-import { useEffect } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
-
-export function Parent() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate('main');
-  }, []);
-
-  return (
-    <S.Background>
-      <Outlet />
-    </S.Background>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:93c0a92e3bb9f591d6fe2344b4824e971fe212e067c2d929e2deab47c5f3e68d
+size 826
