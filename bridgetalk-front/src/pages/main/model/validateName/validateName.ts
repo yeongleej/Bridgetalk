@@ -1,9 +1,3 @@
-/**
- * 영어, 한글, 숫자를 포함한 1자 ~ 20자 이내 문자
- * @param name
- * @returns
- */
-export function validateName(name: string) {
-  const regex = /^[a-zA-Z0-9가-힣]{1,20}$/;
-  return regex.test(name);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3fb60d6f17b792125fb7780077e4bcf86e7a5c1c37a0d48d4d8498bf0416d2e
+size 221
