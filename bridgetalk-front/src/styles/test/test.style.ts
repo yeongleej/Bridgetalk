@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d3f1da95785fa36e432ae16a5a12ff7756cb6e49fcd3083bbd733842d9cc623
-size 192
+import styled from 'styled-components';
+
+export const TestContainer = styled.div`
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+`;
