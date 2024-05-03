@@ -1,4 +1,4 @@
-import * as S from '@/styles/child/talk/message.style';
+import * as S from '@/styles/child/talk/messagePage.style';
 
 export function Message() {
   return (
@@ -7,7 +7,9 @@ export function Message() {
         <div className="message__content">message</div>
         <div className="message__reader">
           <div className="message__reader-talk"></div>
-          <div className="message__reader-dino">dino</div>
+          <div className="message__reader-dino">
+            <img src={'/assets/img/pic/blue.svg'} />
+          </div>
         </div>
       </div>
     </S.Container>
