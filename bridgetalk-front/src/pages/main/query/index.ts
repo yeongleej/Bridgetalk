@@ -1,2 +1,3 @@
 export * from '@/pages/main/query/postSignin/postSignin';
 export * from '@/pages/main/query/postSignup/postSignup';
+export * from '@/pages/main/query/getProfileList/getProfileList';
