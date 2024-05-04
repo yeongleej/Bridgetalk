@@ -1,23 +1,3 @@
-import { decodeToken } from '@/shared';
-import { ReactNode, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-interface Props {
-  children: ReactNode;
-}
-
-/**
- * 로그인시 첫 화면을 건너뛰게 하는 가드
- * @param param0
- */
-export function LoginGuard({ children }: Props) {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (decodeToken('access') !== null) {
-      navigate('/profile');
-    }
-  });
-
-  return <>{children}</>;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:38e89ab0c16250eaa40a9291efeab59ce686464595f9a55c376aab2b881a6421
+size 569
