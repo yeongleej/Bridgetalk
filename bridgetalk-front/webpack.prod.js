@@ -5,6 +5,6 @@ module.exports = merge(common, {
   mode: 'production',
   devServer: {
     historyApiFallback: true,
-    allowedHosts: all,
+    allowedHosts: 'all',
   },
 });
