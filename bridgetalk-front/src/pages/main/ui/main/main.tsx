@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import * as S from '@/styles/main/main.style';
+import { useEffect } from 'react';
 
 export function Main() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate('start');
+    navigate('/start');
   }, []);
 
   return (
