@@ -9,7 +9,6 @@ export const getAvgVolume = function getAvgVolume() {
   function getAvg(volume: number) {
     volumes += volume;
     count++;
-    console.log(volumes, count);
     return Math.round(volumes / count);
   }
 
