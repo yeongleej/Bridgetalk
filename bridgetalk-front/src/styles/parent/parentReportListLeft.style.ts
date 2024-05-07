@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b1f9ed8c25b041c60e8a2c8743aaf460dd5b5c104992a768c975ed895672ab97
-size 193
+import styled from 'styled-components';
+import { color } from './common.style';
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+`;
