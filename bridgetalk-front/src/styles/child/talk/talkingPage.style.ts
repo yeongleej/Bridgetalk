@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1f157a12adacd577e7e83a9aa36c24b724a9bd0cb1c734eb3e6318ba021e027a
-size 462
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .talking {
+    &__container {
+      &-talk {
+        display: flex;
+        flex-direction: column;
+        gap: 2svw;
+
+        .record {
+          display: flex;
+          flex-direction: column;
+        }
+        button {
+          width: 50svw;
+        }
+      }
+    }
+  }
+`;
