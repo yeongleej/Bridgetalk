@@ -1,12 +1,3 @@
-package com.ssafy.bridgetalkback.slang.repository;
-
-import com.ssafy.bridgetalkback.slang.domain.Slang;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.List;
-
-@Repository
-public interface SlangRepository extends JpaRepository<Slang, Long> {
-    List<Slang> findAllByIsDeleted(int isDeleted);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b75d9ba6efd263da20cc0affd74835e56b2d6581d19a93c3b73c2ae66e45150
+size 465
