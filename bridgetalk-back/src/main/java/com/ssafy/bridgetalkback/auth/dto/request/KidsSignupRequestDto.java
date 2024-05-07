@@ -1,4 +1,4 @@
-package com.ssafy.bridgetalkback.auth.dto;
+package com.ssafy.bridgetalkback.auth.dto.request;
 
 public record KidsSignupRequestDto(
         String parentsId,

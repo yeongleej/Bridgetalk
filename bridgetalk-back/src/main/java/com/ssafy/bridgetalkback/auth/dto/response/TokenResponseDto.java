@@ -1,4 +1,4 @@
-package com.ssafy.bridgetalkback.auth.dto;
+package com.ssafy.bridgetalkback.auth.dto.response;
 
 public record TokenResponseDto(
         String accessToken,

@@ -1,4 +1,4 @@
-package com.ssafy.bridgetalkback.parents.dto;
+package com.ssafy.bridgetalkback.parents.dto.response;
 
 import java.util.List;
 
