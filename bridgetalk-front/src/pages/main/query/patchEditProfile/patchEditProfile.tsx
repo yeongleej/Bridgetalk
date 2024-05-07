@@ -6,5 +6,5 @@ interface Dto {
 }
 
 export async function patchEditProfile(requestDto: Dto, UUID: string) {
-  return customAxios.patch(`/profile/${UUID}`).catch((err) => err);
+  return customAxios.patch(`/profile/${UUID}`, requestDto).catch((err) => err);
 }
