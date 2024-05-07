@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0e1e9e9e7ae0c26c8d4c54830b01289c96f07620749471aade59b61646de29ee
-size 226
+import styled from 'styled-components';
+import { color } from './common.style';
+
+export const Wrapper = styled.div`
+  width: 100%;
+  background-color: ${color(1).sub};
+  box-shadow: 0.5svh 0.5svh 0.5svh ${color(0.2).dark};
+`;
