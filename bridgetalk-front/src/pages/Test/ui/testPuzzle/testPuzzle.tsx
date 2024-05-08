@@ -1,15 +1,8 @@
-import styled from 'styled-components';
+import { JigsawPuzzle } from 'react-jigsaw-puzzle/lib';
+import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css';
 
 export function TestPuzzle() {
-    return (
-        <Wrapper>
-            <div></div>
-        </Wrapper>
-    );
+  return (
+    <JigsawPuzzle imageSrc="/assets/img/pic/halongbay.jpg" rows={4} columns={6} onSolved={() => alert('Solved!')} />
+  );
 }
-
-const Wrapper = styled.div`
-    width: 100%;
-    height: 100%;
-    border: 2px solid red;
-`;

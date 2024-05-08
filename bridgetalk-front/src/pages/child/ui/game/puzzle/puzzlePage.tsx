@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f18ba0a73be3bb60405b442e4b79c6487b49d2848b873bc021758bba70a2e9c0
-size 1312
+import { JigsawPuzzle } from 'react-jigsaw-puzzle/lib';
+import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css';
+
+export function PuzzlePage() {
+  return (
+    <JigsawPuzzle imageSrc="/assets/img/pic/halongbay.jpg" rows={4} columns={6} onSolved={() => alert('Solved!')} />
+  );
+}
