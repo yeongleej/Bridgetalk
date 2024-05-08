@@ -2,7 +2,7 @@ import { customAxios } from '@/shared';
 
 export async function getTalkStop(reportsId: number, setReply: any) {
   customAxios
-    .get(`/reports/talk-stop/${206}`, {
+    .get(`/reports/talk-stop/${reportsId}`, {
       responseType: 'blob',
     })
     .then((res) => {
