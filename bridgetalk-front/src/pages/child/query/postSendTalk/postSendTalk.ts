@@ -1,16 +1,3 @@
-import { customAxios } from '@/shared';
-
-export async function postSendTalk(reportsId: number, audio: Blob, setReply: any) {
-  const formData = new FormData();
-
-  formData.append('reportsFile', audio);
-
-  return customAxios
-    .patch(`/reports/talk-send/${reportsId}`, formData, {
-      responseType: 'blob',
-    })
-    .then((res) => {
-      setReply(res.data);
-    })
-    .catch((err) => console.log(err));
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:83ee20454271f244074f86d7b01f91c742268e780c178181333ec58c79f4e4ca
+size 412

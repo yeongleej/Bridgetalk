@@ -1,16 +1,3 @@
-/**
- * getAvgVolume: 클로저(getAvg)를 활용해서 작성한 함수
- * 녹음이 새로 시작될 때 마다 새로 호출해줘야함
- */
-export const getAvgVolume = function getAvgVolume() {
-  let count = 0;
-  let volumes = 0;
-
-  function getAvg(volume: number) {
-    volumes += volume;
-    count++;
-    return Math.round(volumes / count);
-  }
-
-  return getAvg;
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:59cda60b98b718ddac85ef59aefab1f48451f656095ec896ceb31ce8822e97e8
+size 371
