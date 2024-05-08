@@ -1,17 +1,3 @@
-import * as S from '@/styles/child/talk/messagePage.style';
-
-export function Message() {
-  return (
-    <S.Container>
-      <div className="message">
-        <div className="message__content">message</div>
-        <div className="message__reader">
-          <div className="message__reader-talk"></div>
-          <div className="message__reader-dino">
-            <img src={'/assets/img/pic/blue.svg'} />
-          </div>
-        </div>
-      </div>
-    </S.Container>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:169588a85dc5ff9c99305fa3040fa7e1c94dd0e79551c02913d50b6f8f88b45e
+size 517
