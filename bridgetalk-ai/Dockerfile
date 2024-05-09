@@ -1,15 +1,19 @@
 FROM python:3.9
 
-COPY ./requirements.txt /bridgetalk-ai/requirements.txt
-
-#COPY ./.env /fastApiProject/.env
-
 WORKDIR /bridgetalk-ai
 
-RUN pip install --no-cache-dir --upgrade -r /bridgetalk-ai/requirements.txt
+COPY ./requirements.txt requirements.txt
 
-COPY ./app /bridgetalk-ai/app
+#WORKDIR /bridgetalk-ai
 
-RUN cd /bridgetalk-ai/app
+RUN ls -al
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
+
+COPY ./app app
+
+RUN ls -al
+
+#RUN cd /bridgetalk-ai
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
