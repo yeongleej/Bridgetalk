@@ -1,8 +1,3 @@
-import { JigsawPuzzle } from 'react-jigsaw-puzzle/lib';
-import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css';
-
-export function PuzzlePage() {
-  return (
-    <JigsawPuzzle imageSrc="/assets/img/pic/halongbay.jpg" rows={4} columns={5} onSolved={() => alert('Solved!')} />
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e68dea53cc49f15ec0866a782ec929ec5aefb4103032f828c36804c3e7373b18
+size 275
