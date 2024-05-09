@@ -6,7 +6,7 @@ export async function getTalkStop(reportsId: number, setReply: any) {
       responseType: 'blob',
     })
     .then((res) => {
-      setReply(res.data);
+      setReply(URL.createObjectURL(res.data));
     })
     .catch((err) => console.log(err));
 }
