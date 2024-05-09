@@ -1,3 +1,3 @@
-export function DeleteProfile() {
+export function DeleteProfilePage() {
   return <div></div>;
 }
