@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5d32e77b868121ca3045b95cad7a614d450a030c07cb7bfcf52421165b82736b
-size 280
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="whisper-test" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="whisper-venv" project-jdk-type="Python SDK" />
+</project>

@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0dea6259d8b67588293bf2bd8d32e28fd5dc73a44f415b3bff4536764de4197f
-size 436
+import { MutableRefObject } from 'react';
+
+export async function connectAudioStream(streamRef: MutableRefObject<MediaStream | null>) {
+  try {
+    const constraints = {
+      audio: true,
+    };
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+
+    streamRef.current = stream;
+
+    return stream;
+  } catch (err) {
+    console.log('녹음 장치 액세스에 실패했습니다.', err);
+
+    return err;
+  }
+}
