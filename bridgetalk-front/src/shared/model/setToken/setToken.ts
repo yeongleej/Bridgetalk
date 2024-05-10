@@ -1,11 +1,11 @@
 export function setToken(accessToken: string, refreshToken?: string) {
-  sessionStorage.setItem(
+  localStorage.setItem(
     btoa('access' + process.env.REACT_APP_SECURE_CODE),
     btoa(accessToken + process.env.REACT_APP_SECURE_CODE),
   );
 
   if (refreshToken) {
-    sessionStorage.setItem(
+    localStorage.setItem(
       btoa('refresh' + process.env.REACT_APP_SECURE_CODE),
       btoa(refreshToken + process.env.REACT_APP_SECURE_CODE),
     );
