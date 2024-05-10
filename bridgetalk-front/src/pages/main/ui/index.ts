@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bfa705e58eab23089ef9cd55fba88b2126e2463dc6c79ae6b50d938233c7c170
-size 350
+export * from '@/pages/main/ui/main/main';
+export * from '@/pages/main/ui/start/startPage';
+export * from '@/pages/main/ui/sign/signInPage';
+export * from '@/pages/main/ui/sign/signUpPage';
+export * from '@/pages/main/ui/profile/profilePage';
+export * from '@/pages/main/ui/profile/editProfilePage';
+export * from '@/pages/main/ui/guard/loginGuard';
