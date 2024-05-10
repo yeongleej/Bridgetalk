@@ -1,1 +1,3 @@
-export function DressingPage() {}
+export function DressingPage() {
+  return <></>;
+}
