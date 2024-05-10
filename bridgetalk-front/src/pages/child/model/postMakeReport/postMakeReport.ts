@@ -1,16 +1,3 @@
-import { customAxios } from '@/shared';
-
-export async function postMakeReport(setReportsId: any) {
-  customAxios
-    .post(
-      `/reports`,
-      {},
-      {
-        headers: {
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiNTgxMGJmZTAtNTIxOC00MWNkLThiNzEtNzc0MTdlNWI4YjQ0IiwiaWF0IjoxNzE0NTcyMzIxLCJleHAiOjE3MTU3ODE5MjF9.nBXZXPoO1UM4jS5_LaeVttS9l8XMYfStecwvORVOFvM`,
-        },
-      },
-    )
-    .then((res) => setReportsId(res.data.reportsId))
-    .catch((err) => console.log(err));
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b28abe7b12b2f854948b7b51cd0d03e9f7257df87f6b1d3cadd441d5d1e1499
+size 508
