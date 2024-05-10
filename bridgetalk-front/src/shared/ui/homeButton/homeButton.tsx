@@ -12,7 +12,7 @@ export function HomeButton({ navigate }: Props) {
         navigate('../start');
       }}
     >
-      <img src={'/assets/img/homeicon.svg'} />
+      <img src={'/assets/img/homeIcon.svg'} />
     </S.Wrapper>
   );
 }
