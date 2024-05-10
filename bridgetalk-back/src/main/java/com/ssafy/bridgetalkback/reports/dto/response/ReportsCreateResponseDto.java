@@ -1,4 +1,4 @@
-package com.ssafy.bridgetalkback.reports.dto;
+package com.ssafy.bridgetalkback.reports.dto.response;
 
 import com.ssafy.bridgetalkback.reports.domain.Reports;
 import lombok.Builder;
