@@ -1,19 +1,24 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    overscroll-behavior-y: contain; /* 폰에서 아래로 드래그했을 때 새로고침 방지 */
+  overscroll-behavior-y: contain; /* 폰에서 아래로 드래그했을 때 새로고침 방지 */
 }
 
 @font-face {
-    font-family: 'CherryBomb';
-    src: url('@/assets/fonts/CherryBombOne-Regular.ttf');
+  font-family: 'CherryBomb';
+  src: url('@/assets/fonts/CherryBombOne-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'DNF';
-    src: url('@/assets/fonts/DNFBitBitv2.ttf');
+  font-family: 'DNF';
+  src: url('@/assets/fonts/DNFBitBitv2.ttf');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('@/assets/fonts/Pretendard-Medium.ttf');
 }
