@@ -1,12 +1,3 @@
-import { customAxios } from '@/shared';
-
-export async function getTalkStart(setReply: any) {
-  return customAxios
-    .get(`/reports/talk-start`, {
-      responseType: 'blob',
-    })
-    .then((res) => {
-      setReply(URL.createObjectURL(res.data));
-    })
-    .catch((err) => console.log(err));
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:96271d50243dc52360684959d09067bacb3e69c40a90d613cb1fe37f8cc3a1a3
+size 299
