@@ -1,11 +1,3 @@
-package com.ssafy.bridgetalkback.parentingInfo.repository;
-
-import com.ssafy.bridgetalkback.parentingInfo.domain.Age;
-import com.ssafy.bridgetalkback.parentingInfo.domain.BoardNum;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
-
-public interface BoardNumRepository extends JpaRepository<BoardNum, Long> {
-    List<BoardNum> findBoardNumByAge(Age age);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc97bcb2733e2bc84e492b39c866152c6995c069bcf57a1c624576cf83d5be2f
+size 393
