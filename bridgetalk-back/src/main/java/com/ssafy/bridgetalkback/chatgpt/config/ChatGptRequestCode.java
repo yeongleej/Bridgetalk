@@ -6,7 +6,8 @@ public enum ChatGptRequestCode {
     CONVERSION("conversion"),
     KEYWORD("keyword"),
     ANSWER("answer"),
-    SOLUTION("solution");
+    SOLUTION("solution"),
+    EMOTION("emotion");
 
     private final String label;
 
