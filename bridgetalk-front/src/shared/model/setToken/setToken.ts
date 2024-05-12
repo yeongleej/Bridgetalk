@@ -1,13 +1,3 @@
-export function setToken(accessToken: string, refreshToken?: string) {
-  sessionStorage.setItem(
-    btoa('access' + process.env.REACT_APP_SECURE_CODE),
-    btoa(accessToken + process.env.REACT_APP_SECURE_CODE),
-  );
-
-  if (refreshToken) {
-    sessionStorage.setItem(
-      btoa('refresh' + process.env.REACT_APP_SECURE_CODE),
-      btoa(refreshToken + process.env.REACT_APP_SECURE_CODE),
-    );
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:af7979ec6838112ed7edf34aa23eccddf275817f658b3c43585b7299f6fc9051
+size 398
