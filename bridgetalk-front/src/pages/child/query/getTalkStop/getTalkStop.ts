@@ -1,12 +1,3 @@
-import { customAxios } from '@/shared';
-
-export async function getTalkStop(reportsId: number, setReply: any) {
-  customAxios
-    .get(`/reports/talk-stop`, {
-      responseType: 'blob',
-    })
-    .then((res) => {
-      setReply(URL.createObjectURL(res.data));
-    })
-    .catch((err) => console.log(err));
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c6249f6db75d8219018ad14638db5440d3a4db188d925020cded8e5c2fe64127
+size 290
