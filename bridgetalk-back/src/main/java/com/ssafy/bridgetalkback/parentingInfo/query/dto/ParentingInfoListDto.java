@@ -6,10 +6,8 @@ import lombok.Builder;
 @Builder
 public record ParentingInfoListDto(
         Long parentingInfoId,
-        String title_kor,
-        String title_viet,
-        String content_kor,
-        String content_viet,
+        String title,
+        String content,
         String link,
         String category
 ) {
