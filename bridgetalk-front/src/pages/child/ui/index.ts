@@ -1,9 +1,3 @@
-export * from '@/pages/child/ui/childPage';
-export * from '@/pages/child/ui/talk/talkingPage';
-export * from '@/pages/child/ui/talk/messagePage';
-export * from '@/pages/child/ui/talk/components';
-export * from '@/pages/child/ui/talk/warningPage';
-export * from '@/pages/child/ui/game/gamingPage';
-export * from '@/pages/child/ui/game/puzzle/puzzlePage';
-export * from '@/pages/child/ui/game/dress/coloringPage';
-export * from '@/pages/child/ui/game/dress/dressingPage';
+version https://git-lfs.github.com/spec/v1
+oid sha256:297bf86728afca68b116df09f5b7ad2f8017e7ef764f1add922708a6cc30663f
+size 470
