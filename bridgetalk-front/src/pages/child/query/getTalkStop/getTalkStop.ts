@@ -1,6 +1,6 @@
 import { customAxios } from '@/shared';
 
-export async function getTalkStop(reportsId: number, setReply: any) {
+export async function getTalkStop(setReply: any) {
   customAxios
     .get(`/reports/talk-stop`, {
       responseType: 'blob',
