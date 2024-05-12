@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b35423ef096206e59e9f7cc29a41d24fafeb2cfea907abeda32dc535a3d10241
-size 1401
+import { customAxios } from '@/shared';
+
+export async function postSendTalk(formData: any) {
+  return customAxios
+    .patch(`/reports/talk-send`, formData, {
+      responseType: 'blob',
+    })
+    .catch((err) => console.log(err));
+}
