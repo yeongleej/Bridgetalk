@@ -1,6 +1,3 @@
-export * from '@/shared/ui/examUi/examUi';
-export * from '@/shared/ui/modalSpace/modalSpace';
-export * from '@/shared/ui/backButton/backButton';
-export * from '@/shared/ui/homeButton/homeButton';
-export * from '@/shared/ui/homeButton2/homeButton2';
-export * from '@/shared/ui/timer/timer';
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c1fa43f77defcdc280e83ed4c893b0e8226372ba873ddf06eeaa939489df689
+size 392
