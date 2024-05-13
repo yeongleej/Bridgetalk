@@ -1,4 +1,5 @@
 import { customAxios } from '@/shared';
+import axios from 'axios';
 
 export async function getTalkStart(setReply: any) {
   return customAxios
@@ -8,5 +9,7 @@ export async function getTalkStart(setReply: any) {
     .then((res) => {
       setReply(URL.createObjectURL(res.data));
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      throw err;
+    });
 }
