@@ -1,14 +1,3 @@
-import axios from 'axios';
-import { getTalkStart } from '../../query';
-import { errorCatch } from '@/shared';
-
-export async function handleTalkStart(setReply: any, setErrorModalState: any) {
-  try {
-    const data = await getTalkStart(setReply);
-    console.log(data);
-  } catch (err) {
-    if (err instanceof Error) {
-      errorCatch(err, setErrorModalState);
-    }
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:db5bfc52a290dc7cf8e014f8f3ef833227bb8b4ac0ee3cae149691bb6cdff292
+size 618
