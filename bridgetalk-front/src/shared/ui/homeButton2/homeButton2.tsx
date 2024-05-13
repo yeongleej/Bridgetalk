@@ -1,18 +1,3 @@
-import { NavigateFunction } from 'react-router-dom';
-import * as S from '@/styles/shared/homeButton.style';
-interface Props {
-  navigate: NavigateFunction;
-}
-
-export function HomeButton2({ navigate }: Props) {
-  return (
-    <S.Wrapper
-      className="back"
-      onClick={() => {
-        navigate('../start');
-      }}
-    >
-      <img src={'/assets/img/child/homeIcon.svg'} />
-    </S.Wrapper>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:31c581f92c0f05cedbbae05618ace894cff60a5cd272b534d29753fe5b7c6317
+size 404
