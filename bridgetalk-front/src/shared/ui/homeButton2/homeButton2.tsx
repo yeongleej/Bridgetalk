@@ -4,7 +4,7 @@ interface Props {
   navigate: NavigateFunction;
 }
 
-export function HomeButton({ navigate }: Props) {
+export function HomeButton2({ navigate }: Props) {
   return (
     <S.Wrapper
       className="back"
@@ -12,7 +12,7 @@ export function HomeButton({ navigate }: Props) {
         navigate('../start');
       }}
     >
-      <img src={'/assets/img/homeIcon.svg'} />
+      <img src={'/assets/img/child/homeIcon.svg'} />
     </S.Wrapper>
   );
 }
