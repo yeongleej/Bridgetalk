@@ -1,11 +1,3 @@
-import { getNurtureInfoList } from '../../query';
-
-export async function handleNurtureInfoList(language: 'kor' | 'viet', setInfoList: any) {
-  try {
-    const fetchData = await getNurtureInfoList(language);
-
-    setInfoList(fetchData.parentingInfoList);
-  } catch (err) {
-    console.log(err);
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e93d73a72c75b9c463fccaac41410b16250caacc73c9308396db1f8ed8b3dd6a
+size 568
