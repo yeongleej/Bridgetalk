@@ -1,19 +1,3 @@
-export function LoadingScreen() {
-  return (
-    <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'rgba(0,0,0,0.5)',
-      }}
-    >
-      <p style={{ color: 'white' }}>Loading...</p>
-    </div>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff10cc13388fa448fe227704b27e6fe2608692758b03511557b7a0585815bdb7
+size 1052
