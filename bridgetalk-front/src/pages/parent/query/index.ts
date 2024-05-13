@@ -4,3 +4,4 @@ export * from '@/pages/parent/query/getReportDetail/getReportDetail';
 export * from '@/pages/parent/query/getProfile/getProfile';
 export * from '@/pages/parent/query/getSlang/getSlang';
 export * from '@/pages/parent/query/getNurtureInfoList/getNurtureInfoList';
+export * from '@/pages/parent/query/getNurtureInfoDetail/getNurtureInfoDetail';
