@@ -5,5 +5,7 @@ export async function postSendTalk(formData: any) {
     .patch(`/reports/talk-send`, formData, {
       responseType: 'blob',
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      return err;
+    });
 }
