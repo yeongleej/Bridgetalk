@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:93ff3f86161651290620d33b7f7d87b3442fd6adefb70d42608bd738da4ed2d7
-size 370
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overscroll-behavior-y: contain; /* 폰에서 아래로 드래그했을 때 새로고침 방지 */
+}
+
+@font-face {
+  font-family: 'CherryBomb';
+  src: url('@/assets/fonts/CherryBombOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'DNF';
+  src: url('@/assets/fonts/DNFBitBitv2.ttf');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('@/assets/fonts/Pretendard-Medium.ttf');
+}
