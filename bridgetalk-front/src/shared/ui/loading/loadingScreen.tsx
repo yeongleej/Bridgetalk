@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c1b4547605f84872e8dc8bc5cb75afba6cd8ede25413bfc113a372f2c9bff8cf
-size 393
+export function LoadingScreen() {
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0,0,0,0.5)',
+      }}
+    >
+      <p style={{ color: 'white' }}>Loading...</p>
+    </div>
+  );
+}
