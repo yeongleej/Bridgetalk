@@ -1,5 +1,3 @@
-export * from '@/pages/child/query/getTalkStart/getTalkStart';
-export * from '@/pages/child/query/getTalkStop/getTalkStop';
-export * from '@/pages/child/query/postMakeReport/postMakeReport';
-export * from '@/pages/child/query/postSendTalk/postSendTalk';
-export * from '@/pages/child/query/getTalkUpdate/getTalkUpdate';
+version https://git-lfs.github.com/spec/v1
+oid sha256:3fd26aaec8bb42c5f00e3e75dd262c4a5c205d725ce273d3f0b04f68bd948fcc
+size 319
