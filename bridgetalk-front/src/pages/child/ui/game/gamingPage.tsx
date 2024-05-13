@@ -7,7 +7,7 @@ export function GamingPage() {
     <>
       <button
         onClick={() => {
-          navigate('/puzzle');
+          navigate('/stage');
         }}
       >
         puzzle
