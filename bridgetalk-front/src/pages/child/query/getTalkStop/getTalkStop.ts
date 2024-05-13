@@ -1,12 +1,15 @@
 import { customAxios } from '@/shared';
+import { decodeFormData } from '../../model';
 
 export async function getTalkStop(setReply: any) {
-  customAxios
-    .get(`/reports/talk-stop`, {
+  return await customAxios
+    .get(`/reports/talk-stop-multipart`, {
       responseType: 'blob',
     })
-    .then((res) => {
-      setReply(URL.createObjectURL(res.data));
-    })
-    .catch((err) => console.log(err));
+    // .then((res) => {
+    //   setReply(URL.createObjectURL(res.data));
+    // })
+    .catch((err) => {
+      throw err;
+    });
 }
