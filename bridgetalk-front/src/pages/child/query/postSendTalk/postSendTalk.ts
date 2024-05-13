@@ -6,6 +6,6 @@ export async function postSendTalk(formData: any) {
       responseType: 'blob',
     })
     .catch((err) => {
-      return err;
+      throw err;
     });
 }
