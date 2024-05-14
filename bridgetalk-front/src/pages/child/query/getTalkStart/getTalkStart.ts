@@ -1,12 +1,12 @@
 import { customAxios } from '@/shared';
+import axios from 'axios';
 
-export async function getTalkStart(setReply: any) {
+export async function getTalkStart() {
   return customAxios
-    .get(`/reports/talk-start`, {
+    .get(`/reports/talk-start-multipart`, {
       responseType: 'blob',
     })
-    .then((res) => {
-      setReply(URL.createObjectURL(res.data));
-    })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      throw err;
+    });
 }
