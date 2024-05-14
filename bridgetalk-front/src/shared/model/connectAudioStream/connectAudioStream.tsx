@@ -11,8 +11,6 @@ export async function connectAudioStream(streamRef: MutableRefObject<MediaStream
 
     return stream;
   } catch (err) {
-    console.log('녹음 장치 액세스에 실패했습니다.', err);
-
-    return err;
+    throw err;
   }
 }
