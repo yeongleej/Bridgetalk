@@ -1,23 +1,3 @@
-import styled from 'styled-components';
-import { CommonContainer, color } from '@/styles/parent/common.style';
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
-  width: 90svw;
-  height: 70svh;
-
-  margin-top: 5svh;
-`;
-
-export const ContentContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-
-  gap: 4svw;
-
-  width: 100%;
-  height: 100%;
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6041b1f08e40ff558906c8c6a138e0222427d963f11d462ddb8ef6e984bb9b9
+size 419

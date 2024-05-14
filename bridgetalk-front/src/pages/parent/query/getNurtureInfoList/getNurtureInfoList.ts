@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bf0417db7134f1a33d55e5172230fe7fcf19b76066c3d36eb0fa7cfd78964bed
-size 339
+import { customAxios } from '@/shared';
+
+export async function getNurtureInfoList(language: 'kor' | 'viet', page: number = 0, searchCategory: string = '') {
+  return customAxios
+    .get(`/parentingInfo/${language}`, {
+      params: {
+        page: page,
+        searchCategory: searchCategory,
+      },
+    })
+    .catch((err) => err);
+}
