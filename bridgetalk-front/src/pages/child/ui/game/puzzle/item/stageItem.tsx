@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d2538b133a57ecff078c8d43c1ccbfdc5f215f72f77366259410e3362c92b91c
-size 432
+import { useNavigate } from 'react-router-dom';
+
+interface StageItemProps {
+  id: string;
+  img: string;
+  name: string;
+}
+
+export function StageItem({ id, img, name }: StageItemProps) {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/puzzle/${id}`);
+  };
+
+  return (
+    <div className="stageItem" onClick={handleClick}>
+      <span>{name}</span>
+      <img src={img} alt={name} />
+    </div>
+  );
+}
