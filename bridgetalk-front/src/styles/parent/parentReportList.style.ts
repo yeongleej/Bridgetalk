@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const ContentContainer = styled.div`
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
   gap: 4svw;
 
