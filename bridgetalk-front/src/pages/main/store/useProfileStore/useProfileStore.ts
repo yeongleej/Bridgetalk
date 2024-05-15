@@ -1,14 +1,3 @@
-import { create } from 'zustand';
-
-interface Store {
-  deleteModalOpenState: any;
-  setDeleteModalOpenState: any;
-}
-
-export const useProfileStore = create<Store>()((set) => ({
-  deleteModalOpenState: false,
-  setDeleteModalOpenState: (deleteModalState: any) =>
-    set({
-      deleteModalOpenState: deleteModalState,
-    }),
-}));
+version https://git-lfs.github.com/spec/v1
+oid sha256:1dfcc02e664417cdb1e111082ec07f5f83edc77d5feb99a90e4cfdc82fe1fbb3
+size 330

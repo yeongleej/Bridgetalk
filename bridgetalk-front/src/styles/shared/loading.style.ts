@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:40fe2981fcd4d20f8a6e5bfe774b6d61e39109c2ef2abc299e82cb4ef3bac226
-size 425
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1svh;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #ff6161;
+
+  .loadingScreen {
+    &__character {
+      
+    }
+
+    &__text {
+      font-size: 3svh;
+      font-family: 'DNF';
+      color: white;
+    }
+  }
+`;
