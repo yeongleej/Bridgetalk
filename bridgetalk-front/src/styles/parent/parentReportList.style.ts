@@ -16,7 +16,9 @@ export const ContentContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  gap: 4svw;
+  gap: 2svw;
+
+  padding: 0 2svw;
 
   width: 100%;
   height: 100%;
