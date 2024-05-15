@@ -7,18 +7,14 @@ export const Container = styled.div`
   position: relative;
 
   width: 90svw;
-  height: 100svh;
-
-  margin-top: 5svh;
+  height: 80svh;
 `;
 
 export const ContentContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
 
   gap: 2svw;
-
-  padding: 0 2svw;
 
   width: 100%;
   height: 100%;
