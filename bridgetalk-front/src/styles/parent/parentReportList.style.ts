@@ -7,7 +7,7 @@ export const Container = styled.div`
   position: relative;
 
   width: 90svw;
-  height: 70svh;
+  height: 100svh;
 
   margin-top: 5svh;
 `;
