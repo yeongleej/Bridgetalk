@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:89e1c40265cb78464d60cb334c57619858277704b878a5c3533a73d03701f861
-size 362
+import { MutableRefObject } from 'react';
+
+export async function connectAudioStream(streamRef: MutableRefObject<MediaStream | null>) {
+  try {
+    const constraints = {
+      audio: true,
+    };
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+
+    streamRef.current = stream;
+
+    return stream;
+  } catch (err) {
+    throw err;
+  }
+}
