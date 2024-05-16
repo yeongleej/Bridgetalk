@@ -1,19 +1,3 @@
-package com.ssafy.bridgetalkback.letters.dto.response;
-
-import com.ssafy.bridgetalkback.letters.domain.LettersImg;
-import lombok.Builder;
-
-@Builder
-public record LettersImgResponseDto(
-
-        String keyword,
-        String lettersImgUrl
-) {
-    public static LettersImgResponseDto of(LettersImg lettersImg) {
-        return LettersImgResponseDto.builder()
-                .lettersImgUrl(lettersImg.getLettersImgUrl())
-                .keyword(lettersImg.getKeyword())
-                .build();
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6ae84d32c8d8084c76f0787a3e082d7fea88a8741ee38fe8a14c7fb95e6aba9
+size 505
