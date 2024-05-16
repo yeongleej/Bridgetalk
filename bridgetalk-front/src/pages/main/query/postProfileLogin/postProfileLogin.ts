@@ -1,5 +1,12 @@
 import { customAxios } from '@/shared';
 
-export async function postProfileLogin(UUID: string) {
-  return customAxios.post(`/auth/profileLogin/${UUID}`).catch((err) => err);
+export async function postProfileLogin(UUID: string, password: string) {
+  const requestDto = {
+    profileId: UUID,
+    password: password,
+  };
+
+  return customAxios.post(`/auth/profileLogin`, requestDto).catch((err) => {
+    throw err;
+  });
 }
