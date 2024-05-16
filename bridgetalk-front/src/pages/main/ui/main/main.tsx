@@ -1,17 +1,3 @@
-import { Outlet, useNavigate } from 'react-router-dom';
-import * as S from '@/styles/main/main.style';
-import { useEffect } from 'react';
-
-export function Main() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate('/start');
-  }, []);
-
-  return (
-    <S.Background>
-      <Outlet />
-    </S.Background>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:996a244909cb37e2ace29f5f0eb4187c8d69f4a7c2b59ecb156549e1381fbcad
+size 328
