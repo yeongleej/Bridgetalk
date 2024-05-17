@@ -11,6 +11,8 @@ export const Button = styled.button`
   top: 3svh;
   left: 13svw;
 
+  cursor: pointer;
+
   img {
     width: 3svw;
     height: 3svw;

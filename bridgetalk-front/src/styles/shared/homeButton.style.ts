@@ -9,6 +9,7 @@ export const Wrapper = styled.button`
 
   border: none;
 
+  cursor: pointer;
   img {
     width: 7svw;
   }
