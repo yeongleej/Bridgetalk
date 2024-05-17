@@ -1,11 +1,3 @@
-package com.ssafy.bridgetalkback.comments.repository;
-
-import com.ssafy.bridgetalkback.comments.domain.Comments;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
-
-public interface CommentsRepository extends JpaRepository<Comments, Long> {
-
-    Optional<Comments> findByCommentsIdAndIsDeleted(Long commentsId, int i);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fb9396f5df29fe8f7daff5b0ba444f948745e7e1c71776033c848425925191d2
+size 360
