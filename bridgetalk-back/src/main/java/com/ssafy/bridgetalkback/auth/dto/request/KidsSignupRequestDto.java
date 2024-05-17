@@ -4,6 +4,7 @@ public record KidsSignupRequestDto(
         String parentsId,
         String kidsName,
         String kidsNickname,
-        String kidsDino
+        String kidsDino,
+        String kidsPassword
 ) {
 }

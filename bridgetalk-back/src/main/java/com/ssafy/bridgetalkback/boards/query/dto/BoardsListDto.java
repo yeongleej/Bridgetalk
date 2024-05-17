@@ -13,7 +13,7 @@ public record BoardsListDto(
         LocalDateTime createdAt,
         String reportsSummary,
         List<String> reportsKeywords,
-        String writer
+        String parentsNickname
 ) {
     @QueryProjection
     public BoardsListDto {
