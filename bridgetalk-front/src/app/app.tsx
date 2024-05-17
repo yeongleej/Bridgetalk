@@ -1,13 +1,3 @@
-import * as S from '@/styles/app/app.style';
-import { AppRoutes } from './appRoutes';
-import { ModalSpace } from '@/shared';
-
-export function App() {
-    return (
-        <S.Container>
-            <S.GlobalStyle />
-            <AppRoutes />
-            <ModalSpace />
-        </S.Container>
-    );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aaaf26452596dfa68fb9cb7d5c36450bb4d8452e9af2a087b6cb01217c42d085
+size 340
