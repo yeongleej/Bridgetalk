@@ -1,7 +1,7 @@
 import { customAxios } from '@/shared';
 
 interface Language {
-  type: 'kor' | 'viet';
+  type: 'kor' | 'viet' | 'ph';
 }
 
 /**
