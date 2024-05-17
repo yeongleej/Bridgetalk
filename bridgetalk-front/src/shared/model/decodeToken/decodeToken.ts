@@ -1,9 +1,3 @@
-export function decodeToken(tokenType: 'access' | 'refresh') {
-  if (localStorage.getItem(btoa(`${tokenType}` + process.env.REACT_APP_SECURE_CODE)) === null) {
-    return null;
-  }
-
-  return atob(localStorage.getItem(btoa(`${tokenType}` + process.env.REACT_APP_SECURE_CODE))!).split(
-    `${process.env.REACT_APP_SECURE_CODE}`,
-  )[0];
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc6a6a7e0078b3cc2afdc7406e5c77774fcdaac22bd4c1a35db1c4b50812c600
+size 550
