@@ -1,13 +1,16 @@
 import * as S from '@/styles/app/app.style';
 import { AppRoutes } from './appRoutes';
 import { ModalSpace } from '@/shared';
+import { registServiceWorker } from '@/shared/model/registServiceWorker/registServiceWorker';
 
 export function App() {
-    return (
-        <S.Container>
-            <S.GlobalStyle />
-            <AppRoutes />
-            <ModalSpace />
-        </S.Container>
-    );
+  registServiceWorker();
+
+  return (
+    <S.Container>
+      <S.GlobalStyle />
+      <AppRoutes />
+      <ModalSpace />
+    </S.Container>
+  );
 }
