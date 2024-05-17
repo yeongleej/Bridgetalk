@@ -5,6 +5,7 @@ interface Dto {
   kidsName: string;
   kidsNickname: string;
   kidsDino: string;
+  kidsPassword: string;
 }
 
 export async function postAddProfile(requestDto: Dto) {
