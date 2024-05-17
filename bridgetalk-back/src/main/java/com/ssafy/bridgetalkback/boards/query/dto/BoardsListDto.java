@@ -1,22 +1,3 @@
-package com.ssafy.bridgetalkback.boards.query.dto;
-
-import com.querydsl.core.annotations.QueryProjection;
-
-import java.time.LocalDateTime;
-import java.util.List;
-
-public record BoardsListDto(
-        Long boardId,
-        String boardsTitle,
-        String boardsContent,
-        int likes,
-        LocalDateTime createdAt,
-        String reportsSummary,
-        List<String> reportsKeywords,
-        String writer
-) {
-    @QueryProjection
-    public BoardsListDto {
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c590609f77e9a6d2725d3782c2550731e86ffb9e98421226d6d751562570748d
+size 476
