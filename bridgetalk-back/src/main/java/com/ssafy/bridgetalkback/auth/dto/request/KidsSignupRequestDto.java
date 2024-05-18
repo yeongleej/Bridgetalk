@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3a771c0c54c559a32406983a46ffedf5e7c4864c63d2819adcebca002f0130fb
-size 227
+package com.ssafy.bridgetalkback.auth.dto.request;
+
+public record KidsSignupRequestDto(
+        String parentsId,
+        String kidsName,
+        String kidsNickname,
+        String kidsDino,
+        String kidsPassword
+) {
+}
