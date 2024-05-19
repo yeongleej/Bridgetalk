@@ -1,14 +1,3 @@
-import { getBoardList } from '../../query';
-
-export async function handleSearchBoard(
-  language: any,
-  page: number,
-  searchType: string,
-  searchWord: string,
-  sort: string,
-) {
-  try {
-    const data = await getBoardList(language, page, searchType, searchWord, sort);
-    return data;
-  } catch (err) {}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:99e915aa76af416c2cad9cdcc88f5158a3baa88328d358398af605740a46262e
+size 312
