@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b24846657d670eea33d15daca318f51e730079650d477d9cfa136a362884bede
-size 300
+import * as S from '@/styles/app/app.style';
+import { AppRoutes } from './appRoutes';
+import { ModalSpace } from '@/shared';
+
+export function App() {
+    return (
+        <S.Container>
+            <S.GlobalStyle />
+            <AppRoutes />
+            <ModalSpace />
+        </S.Container>
+    );
+}
