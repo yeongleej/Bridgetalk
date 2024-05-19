@@ -1,13 +1,3 @@
-package com.ssafy.bridgetalkback.puzzle.repository;
-
-import com.ssafy.bridgetalkback.puzzle.domain.Puzzle;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
-import java.util.Optional;
-
-public interface PuzzleRepository extends JpaRepository<Puzzle, Long> {
-    Optional<Puzzle> findByPuzzleIdAndIsDeleted(Long puzzleId, int isDeleted);
-
-    List<Puzzle> findAllByIsDeleted(int isDeleted);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9f67f42fbd17f42ed89ecfbda8d155826057248b6191d84b0fd20db239dcf810
+size 510
