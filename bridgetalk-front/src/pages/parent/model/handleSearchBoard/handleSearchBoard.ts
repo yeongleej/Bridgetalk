@@ -7,7 +7,6 @@ export async function handleSearchBoard(
   searchType: string,
   sort: string,
 ) {
-  console.log(searchWord, language, page, searchType, sort);
   try {
     const data = await getBoardList(searchWord, language, page, searchType, sort);
     return data;
