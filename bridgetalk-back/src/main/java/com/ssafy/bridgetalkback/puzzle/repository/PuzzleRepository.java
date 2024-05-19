@@ -10,4 +10,6 @@ public interface PuzzleRepository extends JpaRepository<Puzzle, Long> {
     Optional<Puzzle> findByPuzzleIdAndIsDeleted(Long puzzleId, int isDeleted);
 
     List<Puzzle> findAllByIsDeleted(int isDeleted);
+
+    List<Puzzle> findAllByIsDeletedAndPuzzleNation(int isDeleted, String nation);
 }
