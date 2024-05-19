@@ -1,7 +1,7 @@
 import { customAxios } from '@/shared';
 
-export async function getCommentList(language: any) {
-  return customAxios.get(`/comments/read/${language}`).catch((err) => {
+export async function getCommentList(language: any, boardId: number) {
+  return customAxios.get(`/comments/read/${boardId}/${language}`).catch((err) => {
     throw err;
   });
 }
