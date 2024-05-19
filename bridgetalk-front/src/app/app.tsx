@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4d9a6744fd965d610a8a15cb9528fad9cc78f324a32aa543bb0dc68b0f87b416
-size 460
+import * as S from '@/styles/app/app.style';
+import { AppRoutes } from './appRoutes';
+import { ModalSpace } from '@/shared';
+import { AppPreloader } from './appPreloader';
+import { registServiceWorker } from '@/shared/model/registServiceWorker/registServiceWorker';
+
+export function App() {
+  registServiceWorker();
+
+  return (
+    <S.Container>
+      <AppPreloader />
+      <S.GlobalStyle />
+      <AppRoutes />
+      <ModalSpace />
+    </S.Container>
+  );
+}
