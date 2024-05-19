@@ -8,6 +8,7 @@ export const Container = styled.div`
 
   width: 90svw;
   height: 80svh;
+  padding: 2svh 2svw;
 `;
 
 export const ContentContainer = styled.div`
