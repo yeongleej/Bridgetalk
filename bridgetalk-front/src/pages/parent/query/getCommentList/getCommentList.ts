@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9a2ade3d3addb9827661175b435a8e604a72cf7227a1d18a322feaeed97a48b2
-size 190
+import { customAxios } from '@/shared';
+
+export async function getCommentList(language: any) {
+  return customAxios.get(`/comments/read/${language}`).catch((err) => {
+    throw err;
+  });
+}
