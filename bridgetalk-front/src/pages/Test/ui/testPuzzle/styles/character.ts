@@ -1,29 +1,3 @@
-import styled from 'styled-components';
-
-export const Container = styled.div`
-  width: 100svw;
-  height: 100svh;
-
-  background-color: pink;
-
-  .three {
-    width: 100%;
-    height: 100%;
-    position: relative;
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-
-      img {
-        width: 20%;
-      }
-    }
-  }
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:b17b0a1735b1d274dba053e8ca271a5f3f7e67b8aefaa339a3f095fa621e0ef9
+size 435
