@@ -11,5 +11,7 @@ interface Language {
  * @returns
  */
 export async function getReportList(kidsId: string, language: Language['type']) {
-  return customAxios.get(`/reports/${kidsId}/${language}`).catch((err) => console.log(err));
+  return customAxios.get(`/reports/${kidsId}/${language}`).catch((err) => {
+    // console.log(err);
+  });
 }
