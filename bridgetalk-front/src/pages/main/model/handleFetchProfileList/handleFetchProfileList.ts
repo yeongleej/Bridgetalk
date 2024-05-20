@@ -1,15 +1,3 @@
-import { decodeToken } from '@/shared';
-import { getProfileList } from '../../query';
-
-export async function handleFetchProfileList(accessToken: string, setProfileList: any) {
-  try {
-    const response = await getProfileList(decodeToken('access', true)!);
-    console.log(decodeToken('access', true));
-    console.log(response);
-    if (response && response.data) {
-      setProfileList(response.data.profileList);
-    }
-  } catch (err) {
-    console.log(err);
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:11ff5402a3a129d28621c0a634b4b6f7741b869c4db560c7acec97a6b7562585
+size 468

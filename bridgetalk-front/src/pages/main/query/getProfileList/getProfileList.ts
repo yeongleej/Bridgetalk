@@ -1,12 +1,3 @@
-import { customAxios } from '@/shared';
-
-export async function getProfileList(token: string) {
-  return customAxios
-    .get('/profile', {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-    .then((res) => res)
-    .catch((err) => console.log(err));
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6ec511c8f3bc3d8677c76badb53dd178c4ab20b67a781c5cec3b7284841c92cb
+size 279

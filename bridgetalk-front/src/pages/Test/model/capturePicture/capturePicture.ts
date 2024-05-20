@@ -1,11 +1,3 @@
-import { Context, RefObject } from 'react';
-
-// 카메라 화면 캡쳐하기
-export const capturePicture = (canvasRef: RefObject<HTMLCanvasElement>, videoRef: RefObject<HTMLVideoElement>) => {
-    const ctx: CanvasRenderingContext2D = canvasRef.current!.getContext('2d')!;
-
-    ctx.drawImage(videoRef.current!, 0, 0, canvasRef.current!.width, canvasRef.current!.height);
-
-    console.log(ctx);
-    // return canvasRef.current!.toDataURL('image/jpg');
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c6bb256678ac2d14066b90a5084ddb730a37180a58a8c640cf15604fc156952
+size 455
