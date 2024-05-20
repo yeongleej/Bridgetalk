@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:04c53386531b3c35d289410acc12ba958dee61260a0f348f1bb6f3a664e755db
-size 510
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+export const VideoWrapper = styled.div`
+  background-color: orange;
+  width: 100%;
+  height: 50%;
+
+  video {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const ButtonWrapper = styled.div`
+  width: 100%;
+  height: 10%;
+
+  display: flex;
+  gap: 1%;
+`;
+
+export const CanvasWrapper = styled.div`
+  width: 100%;
+  height: 40%;
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+`;
