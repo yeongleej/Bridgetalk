@@ -10,6 +10,8 @@ export const Wrapper = styled.button`
 
   border: none;
 
+  /* z-index: 1; */
+
   cursor: pointer;
   img {
     width: 7svw;

@@ -4,9 +4,9 @@ export async function handleNurtureInfoDetail(infoId: number, language: any, set
   try {
     const fetchData = await getNurtureInfoDetail(infoId, language);
 
-    console.log(fetchData);
+    // console.log(fetchData);
     setInfoDetail(fetchData.data);
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   }
 }

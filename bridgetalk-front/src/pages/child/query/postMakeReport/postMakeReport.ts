@@ -5,7 +5,6 @@ export async function postMakeReport(setReportsId: any) {
     .post(`/reports`, {}, {})
     .then((res) => setReportsId(res.data.reportsId))
     .catch((err) => {
-      console.log(err);
-      alert(err);
+      // console.log(err);
     });
 }
