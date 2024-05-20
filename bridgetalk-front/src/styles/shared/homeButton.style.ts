@@ -13,5 +13,7 @@ export const Wrapper = styled.button`
   cursor: pointer;
   img {
     width: 7svw;
-  }
+  } 
 `;
+
+//commit
