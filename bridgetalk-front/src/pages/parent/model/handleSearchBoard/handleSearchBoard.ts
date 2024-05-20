@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:87571955950b0801aa2f9e4dc09c28b260000d3c4875799850bbb210904a23da
-size 330
+import { getBoardList } from '../../query';
+
+export async function handleSearchBoard(
+  searchWord: string,
+  language: any,
+  page: number,
+  searchType: string,
+  sort: string,
+) {
+  try {
+    const data = await getBoardList(searchWord, language, page, searchType, sort);
+    return data;
+  } catch (err) {
+    throw err;
+  }
+}
