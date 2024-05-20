@@ -1,3 +1,1 @@
-export function Game() {
-
-}2231
+export function Game() {}
