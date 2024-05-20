@@ -1,12 +1,23 @@
 import { customAxios } from '@/shared';
 
+interface DeleteBoardDto {
+  boardsTitle: string;
+  boardsContent: string;
+  language: any;
+}
+
 /**
- * 게시글 삭제
+ *
  * @param boardsId
+ * @param requestDto boardsTitle, boardsContent, language
  * @returns
  */
-export async function deleteBoard(boardsId: number) {
-  return customAxios.delete(`/boards/${boardsId}`).catch((err) => {
-    throw err;
-  });
+export async function deleteBoard(boardsId: number, requestDto: DeleteBoardDto) {
+  return customAxios
+    .delete(`/boards/${boardsId}`, {
+      data: requestDto,
+    })
+    .catch((err) => {
+      throw err;
+    });
 }
