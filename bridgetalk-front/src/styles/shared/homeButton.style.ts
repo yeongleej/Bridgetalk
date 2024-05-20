@@ -1,16 +1,3 @@
-import styled from 'styled-components';
-
-export const Wrapper = styled.button`
-  position: fixed;
-  top: 3svh;
-  left: 2svw;
-
-  background-color: transparent;
-
-  border: none;
-
-  cursor: pointer;
-  img {
-    width: 7svw;
-  }
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ad54dfdc4925a90afba5c801229aec53c5f249f33ab46bd8326c3ebfed06353
+size 245
