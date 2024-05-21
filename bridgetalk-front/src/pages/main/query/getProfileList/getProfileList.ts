@@ -8,5 +8,7 @@ export async function getProfileList(token: string) {
       },
     })
     .then((res) => res)
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      // console.log(err);
+    });
 }
