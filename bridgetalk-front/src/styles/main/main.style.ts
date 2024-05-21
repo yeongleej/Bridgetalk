@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:31bc04fc51d3b9ab11110f577e7821cc06dcf5a442a315f87ca5b5ce636c7f61
-size 497
+import styled, { keyframes } from 'styled-components';
+import { bg } from './common.style';
+
+const move = keyframes`
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 5% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+`;
+
+export const Background = styled.div`
+  background-position: center center;
+  background-image: url('/assets/img/main_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  ${bg}
+  animation: ${move} 30s ease-in-out infinite;
+`;
