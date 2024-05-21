@@ -1,23 +1,3 @@
-import { customAxios } from '@/shared';
-
-interface DeleteBoardDto {
-  boardsTitle: string;
-  boardsContent: string;
-  language: any;
-}
-
-/**
- *
- * @param boardsId
- * @param requestDto boardsTitle, boardsContent, language
- * @returns
- */
-export async function deleteBoard(boardsId: number, requestDto: DeleteBoardDto) {
-  return customAxios
-    .delete(`/boards/${boardsId}`, {
-      data: requestDto,
-    })
-    .catch((err) => {
-      throw err;
-    });
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a25627c40a06ca5bd600064242c4a373d41a41c4d8e1495aaf36a11bbab79ab4
+size 456
