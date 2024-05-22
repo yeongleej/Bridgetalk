@@ -9,7 +9,7 @@ export function App() {
 
   return (
     <S.Container>
-      {/* <AppPreloader /> */}
+      <AppPreloader />
       <S.GlobalStyle />
       <AppRoutes />
       <ModalSpace />
