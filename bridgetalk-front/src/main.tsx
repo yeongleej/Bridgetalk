@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:28f31f42c151cd2565b840e2de6e724a7f213268a92d71f9d8ef36a45a2787d9
-size 755
+import { BrowserRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
+import { App } from '@/app/app';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import './main.css';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+
+const container = document.getElementById('root');
+const root = createRoot(container!);
+const queryClient = new QueryClient();
+
+root.render(
+  <QueryClientProvider client={queryClient}>
+    <DndProvider backend={HTML5Backend}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </DndProvider>
+    <ReactQueryDevtools />
+  </QueryClientProvider>,
+);

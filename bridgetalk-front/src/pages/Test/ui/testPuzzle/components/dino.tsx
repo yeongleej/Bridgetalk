@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d4b5176f72e571d7f7daabd050c584350cbe71a2fc3667cbd2956a5585d1de3
-size 1124
+import { useRef, useEffect } from 'react';
+import { useFrame, useLoader, extend } from '@react-three/fiber';
+import { AnimationMixer } from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+
+extend({ OrbitControls });
+
+interface DinoProps {
+  position?: [number, number, number];
+  onClick?: () => void;
+}
+
+export const Dino: React.FC<DinoProps> = ({ position = [0, -0.4, 0], onClick }) => {
+  const gltf = useLoader(GLTFLoader, '/assets/dino/D1/yes.glb');
+  const mixer = useRef<AnimationMixer | null>(null);
+
+  useEffect(() => {
+    if (gltf.animations.length > 0) {
+      mixer.current = new AnimationMixer(gltf.scene);
+      const action = mixer.current.clipAction(gltf.animations[0]);
+      action.play();
+    }
+    return () => {
+      if (mixer.current) {
+        mixer.current.stopAllAction();
+      }
+    };
+  }, [gltf.animations, gltf.scene]);
+
+  useFrame((state, delta) => {
+    mixer.current?.update(delta);
+  });
+
+  return <primitive object={gltf.scene} scale={1} position={position} onClick={onClick} />;
+};

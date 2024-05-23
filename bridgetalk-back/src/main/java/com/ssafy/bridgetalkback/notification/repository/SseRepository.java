@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a89f9e5d176e34743a9ec1afeda42d4d49f14ef764eb6ea5f3547f72793e6398
-size 754
+package com.ssafy.bridgetalkback.notification.repository;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
+
+import java.util.Map;
+import java.util.UUID;
+
+public interface SseRepository {
+    SseEmitter save(String emitterId, SseEmitter sseEmitter);
+
+    void saveEventCache(String eventCacheId, Object event);
+
+    Map<String, SseEmitter> findAllEmitterStartsWithReceiverUuid(String receiverUuid);
+
+    Map<String, Object> findAllEventCacheStartsWithReceiverUuid(String receiverUuid);
+
+    Map<String, SseEmitter> findAllEmitter();
+
+    void deleteEmitterById(String id);
+
+    void deleteAllEmitterStartsWithId(String id);
+
+    void deleteAllEventCacheStartsWithId(String id);
+}

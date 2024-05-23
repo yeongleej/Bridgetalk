@@ -1,3 +1,85 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4bda137ae5d2d19681d1904c0853ccd5c1525d38d3a7918d9881b9f97bd3bb67
-size 2280
+import React, { useState } from 'react';
+import { useLogin } from '@/pages/main/query/login';
+import { useUserStore } from '@/pages/main/store/useUserStore/useUserStore';
+import { useNavigate } from 'react-router-dom';
+import * as S from '@/styles/main/signIn.style';
+import { HomeButton } from '@/shared';
+import { postSignin } from '../../query';
+import { handleSignin } from '../../model';
+import { useErrorStore } from '@/shared/store';
+
+export function SignInPage() {
+  const navigate = useNavigate();
+
+  const userStore = useUserStore();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const setErrorModalState = useErrorStore((state) => state.setErrorModalState);
+
+  return (
+    <S.Container>
+      <HomeButton navigate={navigate} />
+      <div className="title">
+        <img src={'assets/img/main/login.svg'} />
+      </div>
+
+      <div className="email">
+        <div className="email__title">
+          <img src={'assets/img/main/emailicon.svg'} />
+        </div>
+        <input
+          type="email"
+          className="email__input"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
+      </div>
+      <div className="password">
+        <div className="password__title">
+          <img src={'assets/img/main/passwordicon.svg'} />
+        </div>
+        <input
+          type="password"
+          className="password__input"
+          value={password}
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              handleSignin(
+                {
+                  email,
+                  password,
+                },
+                userStore,
+                navigate,
+                setErrorModalState,
+              );
+            }
+          }}
+        />
+      </div>
+      <button
+        className="button"
+        onClick={() => {
+          handleSignin(
+            {
+              email,
+              password,
+            },
+            userStore,
+            navigate,
+            setErrorModalState,
+          );
+        }}
+      >
+        다음
+        <img src={'assets/img/nexticon.svg'} />
+      </button>
+    </S.Container>
+  );
+}

@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f5ad632b3cb9055ba3c82d781c469fb686a4820644c7d971ec5b3d8d304d1a3a
-size 1008
+package com.ssafy.bridgetalkback.boards.repository;
+
+import com.ssafy.bridgetalkback.boards.domain.Boards;
+import com.ssafy.bridgetalkback.boards.domain.BoardsLike;
+import com.ssafy.bridgetalkback.parents.domain.Parents;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.util.UUID;
+
+public interface BoardsLikeRepository extends JpaRepository<BoardsLike, Long> {
+    @Modifying(flushAutomatically = true, clearAutomatically = true)
+    @Query("DELETE FROM BoardsLike b WHERE b.parents.uuid = :parentsId AND b.boards.boardsId = :boardsId")
+    void deleteByParentsIdAndBoardsId(@Param("parentsId") UUID parentsId, @Param("boardsId") Long boardsId);
+
+    boolean existsByParentsUuidAndBoardsBoardsId(UUID parentsId, Long boardsId);
+
+    int countByBoards(Boards boards);
+
+    void deleteByParents(Parents parents);
+}

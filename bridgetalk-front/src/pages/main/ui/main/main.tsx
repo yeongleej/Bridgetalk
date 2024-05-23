@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fe92b1e354d969df618e658a900ce295bec505148ba4ef8a6fba9c7cde027718
-size 603
+import { Outlet, useNavigate } from 'react-router-dom';
+import * as S from '@/styles/main/main.style';
+import { useEffect, useState } from 'react';
+import { WelcomeScreen } from '@/shared/ui/loading/welcomeScreen';
+
+export function Main() {
+  const navigate = useNavigate();
+  const [showWelcome, setShowWelcome] = useState(true);
+
+  useEffect(() => {
+    // 페이지가 로드되자마자 /start 경로로 이동
+    navigate('/start');
+  }, []);
+
+  return (
+    <S.Background>
+      {showWelcome && <WelcomeScreen onClose={() => setShowWelcome(false)} />}
+      <Outlet />
+    </S.Background>
+  );
+}

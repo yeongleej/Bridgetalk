@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3465b2defc86c6f073b52e3da237bfa1ea0fdda83e86438f36e14df07efe1cfb
-size 524
+package com.ssafy.bridgetalkback.slang.exception;
+
+import com.ssafy.bridgetalkback.global.exception.ErrorCode;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+
+@Getter
+@RequiredArgsConstructor
+public enum SlangErrorCode implements ErrorCode {
+    SLANGLIST_NOT_FOUND(HttpStatus.NOT_FOUND, "SLANG_001", "조회한 SlangList의 값이 비어있습니다.");
+
+    private final HttpStatus status;
+    private final String errorCode;
+    private final String message;
+
+}

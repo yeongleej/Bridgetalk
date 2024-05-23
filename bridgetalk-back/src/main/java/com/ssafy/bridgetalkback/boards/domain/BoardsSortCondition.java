@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:21bcd7c84b945c29540b44c9ebeb1fc6e49fb49e7245350bf32ed648f5b19b4a
-size 810
+package com.ssafy.bridgetalkback.boards.domain;
+
+import com.ssafy.bridgetalkback.boards.exception.BoardsErrorCode;
+import com.ssafy.bridgetalkback.global.exception.BaseException;
+import com.ssafy.bridgetalkback.global.utils.EnumStandard;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+import java.util.Arrays;
+
+@Getter
+@AllArgsConstructor
+public enum BoardsSortCondition implements EnumStandard {
+    TIME("최신순"),
+    LIKES("좋아요순");
+
+    private final String value;
+
+    public static BoardsSortCondition from(String value) {
+        return Arrays.stream(values())
+                .filter(boardSortCondition -> boardSortCondition.value.equals(value))
+                .findFirst()
+                .orElseThrow(() -> BaseException.type(BoardsErrorCode.SORT_CONDITION_NOT_FOUND));
+    }
+}

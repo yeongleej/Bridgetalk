@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:88b134a161c756495e04f7516e3ef0a12ff453bc624106ffcdb2c45215b1ee38
-size 532
+package com.ssafy.bridgetalkback.parentingInfo.repository;
+
+import com.ssafy.bridgetalkback.parentingInfo.domain.ParentingInfo;
+import com.ssafy.bridgetalkback.parentingInfo.query.ParentingInfoQueryRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface ParentingInfoRepository extends JpaRepository<ParentingInfo, Long>, ParentingInfoQueryRepository {
+    Optional<ParentingInfo> findParentingInfoByParentingInfoIdAndIsDeleted(Long parentingInfoId, int isDeleted);
+}

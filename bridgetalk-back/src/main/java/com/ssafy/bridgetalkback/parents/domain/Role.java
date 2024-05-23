@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9cebe993f4a6b4903bad2865d2c8411fff132f75831c4e74fa26aa7446ccac2b
-size 662
+package com.ssafy.bridgetalkback.parents.domain;
+
+import com.ssafy.bridgetalkback.global.utils.EnumConverter;
+import com.ssafy.bridgetalkback.global.utils.EnumStandard;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
+public enum Role implements EnumStandard {
+    ADMIN("ROLE_ADMIN"),
+    USER("ROLE_USER")
+    ;
+
+    private final String authority;
+
+    @Override
+    public String getValue() {
+        return authority;
+    }
+
+    @jakarta.persistence.Converter
+    public static class RoleConverter extends EnumConverter<Role> {
+        public RoleConverter() {
+            super(Role.class);
+        }
+    }
+}
+

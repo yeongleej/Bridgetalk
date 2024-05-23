@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ed75a7b59c61bd0098ba0bf7321d168ee03c76a5597b8e3cdb518b799406180f
-size 794
+package com.ssafy.bridgetalkback.boards.dto.response;
+
+import org.springframework.data.domain.Page;
+
+import java.util.List;
+
+public record CustomBoardsListResponseDto<T>(
+        CustomPageable pageInfo,// pageable
+        List<T> boardsList // content
+) {
+    public CustomBoardsListResponseDto(Page<T> page) {
+        this(
+                new CustomPageable(
+                        page.getTotalPages(),
+                        page.getTotalElements(),
+                        page.hasNext(),
+                        page.getNumberOfElements()
+                ),
+                page.getContent()
+        );
+    }
+
+    public record CustomPageable (
+            long totalPages,
+            long totalElements,
+            boolean hasNext,
+            long numberOfElements
+    ) {
+    }
+}

@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:76b40831a8d7ac016d1dcace0f61ebb59968c64ba9d4eb24396b4180c9ff66cb
-size 618
+import styled, { createGlobalStyle } from 'styled-components';
+
+export const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
+
+export const GlobalStyle = createGlobalStyle`
+  /* @font-face {
+    font-family: 'CherryBomb';
+    src: url('@/assets/fonts/CherryBombOne-Regular.ttf')
+  }
+
+  @font-face {
+    font-family: 'DNF-Bold';
+    src: url('@/assets/fonts/DNFForgedBlade-Bold.ttf')
+  }
+
+  @font-face {
+    font-family: 'DNF-Light';
+    src: url('@/assets/fonts/DNFForgedBlade-Light.ttf')
+  }
+
+  @font-face {
+    font-family: 'DNF-Medium';
+    src: url('@/assets/fonts/DNFForgedBlade-Medium.ttf')
+  } */
+`;

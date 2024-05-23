@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:43a72a4ab30d79062773fc40161cefeb2172d5da0cbf5895d4190cc0c3b3696d
-size 957
+import { createContext } from 'react';
+import Dispatcher from '../util/dispatcher';
+import { ColorType, LineWidthType, ShapeOutlineType, ShapeToolType, ToolType } from '../util/toolType';
+
+export const ToolTypeContext = createContext({
+  type: ToolType.PEN,
+  setType: (type: ToolType) => {},
+});
+
+export const ShapeTypeContext = createContext({
+  type: ShapeToolType.LINE,
+  setType: (type: ShapeToolType) => {},
+});
+
+export const ShapeOutlineContext = createContext({
+  type: ShapeOutlineType.SOLID,
+  setType: (type: ShapeOutlineType) => {},
+});
+
+export const LineWidthContext = createContext({
+  type: LineWidthType.THIN,
+  setType: (type: LineWidthType) => {},
+});
+
+export const ColorContext = createContext({
+  mainColor: 'black',
+  subColor: 'white',
+  activeColor: ColorType.MAIN,
+  setColor: (value: string) => {},
+  setActiveColor: (type: ColorType) => {},
+});
+
+export const DispatcherContext = createContext({
+  dispatcher: new Dispatcher(),
+});

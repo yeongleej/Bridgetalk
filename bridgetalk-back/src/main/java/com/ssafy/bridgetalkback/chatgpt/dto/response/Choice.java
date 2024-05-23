@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aa1a411765c78764be13e6e0a4dd2e3b3aed31b514191c3122738ac92d545aed
-size 599
+package com.ssafy.bridgetalkback.chatgpt.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
+
+@Getter
+@NoArgsConstructor
+public class Choice implements Serializable {
+
+    private String text;
+    private Integer index;
+    @JsonProperty("finish_reason")
+    private String finishReason;
+
+    @Builder
+    public Choice(String text, Integer index, String finishReason) {
+        this.text = text;
+        this.index = index;
+        this.finishReason = finishReason;
+    }
+}

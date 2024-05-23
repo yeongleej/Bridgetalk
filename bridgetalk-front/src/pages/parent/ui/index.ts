@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cfed7d0630a907170027164e264a4eec1cee1e0cecdbe34c1fdc41719a69dbfc
-size 825
+export * from '@/pages/parent/ui/parent/parent';
+export * from '@/pages/parent/ui/parentMain/parentMain';
+export * from '@/pages/parent/ui/parentInformation/parentInformation';
+export * from '@/pages/parent/ui/parentInformationNurture/parentInformationNurture';
+export * from '@/pages/parent/ui/parentInformationNurture/parentInformationNurtureDetail';
+export * from '@/pages/parent/ui/parentInformationMain/parentInformationMain';
+export * from '@/pages/parent/ui/parentInformationWord/parentInformationWord';
+export * from '@/pages/parent/ui/parentReportDetail/parentReportDetail';
+export * from '@/pages/parent/ui/parentReportList/parentReportList';
+export * from '@/pages/parent/ui/community/boardPage';
+export * from '@/pages/parent/ui/community/createPage';
+export * from '@/pages/parent/ui/community/boardDetailPage';

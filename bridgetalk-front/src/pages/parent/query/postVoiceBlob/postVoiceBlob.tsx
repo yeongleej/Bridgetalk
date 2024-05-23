@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:46227760caf896c31d62b5f65835c053c7721dec64d820a2efa5a09b9b9e44d1
-size 618
+import { customAxios } from '@/shared';
+
+/**
+ * postVoiceBlob() : 녹음 파일 전송
+ * @param reportId : 답장할 리포트 번호
+ * @param voice : 음성 녹음 파일
+ */
+export function postVoiceBlob(reportId: number, voice: Blob) {
+  const formData = new FormData();
+
+  formData.append('reportsId', String(reportId));
+  formData.append('lettersFile', voice);
+
+  customAxios
+    .post('/letters/upload', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    })
+    .then((res) => {
+      // console.log(res);
+    })
+    .catch((err) => {
+      // console.log(err);
+    });
+}

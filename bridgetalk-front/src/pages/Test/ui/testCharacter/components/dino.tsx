@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e61e6cd9d20d89babcd94924c9205be847e1d4572965bc51c8ed0a0b8ca03e2b
-size 1263
+// import { useRef, useEffect } from 'react';
+// import { useFrame, useLoader, extend } from '@react-three/fiber';
+// import { AnimationMixer } from 'three';
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+
+// extend({ OrbitControls });
+
+// interface DinoProps {
+//   position?: [number, number, number];
+//   onClick?: () => void;
+// }
+
+// export const Dino: React.FC<DinoProps> = ({ position = [0, -0.4, 0], onClick }) => {
+//   const gltfUrl = '/assets/three/entertainment_003(Clone).glb';
+//   const gltf = useLoader(GLTFLoader, gltfUrl);
+//   const mixer = useRef<AnimationMixer | null>(null);
+
+//   useEffect(() => {
+//     if (gltf.animations.length > 0) {
+//       mixer.current = new AnimationMixer(gltf.scene);
+//       const action = mixer.current.clipAction(gltf.animations[0]);
+//       action.play();
+//     }
+//     return () => {
+//       if (mixer.current) {
+//         mixer.current.stopAllAction();
+//       }
+//     };
+//   }, [gltf.animations, gltf.scene]);
+
+//   useFrame((state, delta) => {
+//     mixer.current?.update(delta);
+//   });
+
+//   return <primitive object={gltf.scene} scale={1} position={position} onClick={onClick} />;
+// };

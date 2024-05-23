@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:522ae2eb89c845ad4e0b02eb2b0bcf38fb111b4f80a317d9b3c156d6d3dfcb6e
-size 842
+package com.ssafy.bridgetalkback.letters.dto.response;
+
+import com.ssafy.bridgetalkback.letters.domain.Letters;
+import lombok.Builder;
+
+import java.time.LocalDateTime;
+
+@Builder
+public record LettersResponseDto(
+        Long lettersId,
+        String lettersOriginalContent,
+        String lettersTranslationContent,
+        LocalDateTime lettersRegDate,
+
+        Integer isChecked
+
+) {
+    public static LettersResponseDto of(Letters letters) {
+        return LettersResponseDto.builder()
+                .lettersId(letters.getLettersId())
+                .lettersOriginalContent(letters.getLettersOriginalContent())
+                .lettersTranslationContent(letters.getLettersTranslationContent())
+                .lettersRegDate(letters.getCreatedAt())
+                .isChecked(letters.getIsChecked())
+                .build();
+    }
+}

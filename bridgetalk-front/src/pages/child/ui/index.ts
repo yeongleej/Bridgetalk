@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a7b70be6f9ca1ce41badd909eac67ed290e0832812056c8ba421dc04fa074d14
-size 583
+export * from '@/pages/child/ui/childPage';
+export * from '@/pages/child/ui/talk/talkingPage';
+export * from '@/pages/child/ui/talk/messagePage';
+export * from '@/pages/child/ui/talk/components';
+export * from '@/pages/child/ui/talk/warningPage';
+export * from '@/pages/child/ui/game/gamingPage';
+export * from '@/pages/child/ui/game/puzzle/stagePage';
+export * from '@/pages/child/ui/game/puzzle/puzzlePage';
+export * from '@/pages/child/ui/game/puzzle/finishPage';
+export * from '@/pages/child/ui/game/dress/coloringPage';
+export * from '@/pages/child/ui/game/dress/dressingPage';

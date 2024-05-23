@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:efde30c1fbdcea6304d8963984e82911c0fe790db47a89dcd71383a9d95f0a6c
-size 845
+package com.ssafy.bridgetalkback.slang.dto.response;
+
+import com.ssafy.bridgetalkback.slang.domain.Slang;
+import lombok.Builder;
+
+@Builder
+public record SlangListResponseDto(
+        Long slangId,
+
+        String slangWord,
+
+        String originalWord,
+
+        String meaning,
+
+        String vietnamesePronunciation,
+
+        String vietnameseTranslation
+) {
+    public static SlangListResponseDto from(Slang slang) {
+        return SlangListResponseDto.builder()
+                .slangId(slang.getSlangId())
+                .slangWord(slang.getSlangWord())
+                .originalWord(slang.getOriginalWord())
+                .meaning(slang.getMeaning())
+                .vietnamesePronunciation(slang.getVietnamesePronunciation())
+                .vietnameseTranslation(slang.getVietnameseTranslation())
+                .build();
+    }
+}

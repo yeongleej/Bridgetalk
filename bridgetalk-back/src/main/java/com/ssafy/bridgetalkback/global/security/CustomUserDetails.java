@@ -1,3 +1,52 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:28828feaac9297a756ed4300c3683385f714e9ed10484e81d9e8750e877a23fd
-size 1170
+package com.ssafy.bridgetalkback.global.security;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class CustomUserDetails implements UserDetails {
+    private final UserDetailDto user;
+
+    public CustomUserDetails(UserDetailDto user) {
+        this.user = user;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        Collection<GrantedAuthority> collection = new ArrayList();
+        collection.add((GrantedAuthority) () -> String.valueOf(user.role()));
+        return collection;
+    }
+
+    @Override
+    public String getPassword() {
+        return null;
+    }
+
+    @Override
+    public String getUsername() {
+        return user.email();
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+}

@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2bae2a9272360066e44739beeef29328a662d46e6fba6c7f7a9d56c1f2e8bc24
-size 698
+import { MutableRefObject } from 'react';
+
+export async function connectMicrophone(streamRef: MutableRefObject<MediaStream | undefined>, deviceId: string) {
+  if (streamRef.current) {
+    streamRef.current.getTracks().forEach((track) => {
+      track.stop();
+    });
+  }
+
+  try {
+    const constraints = {
+      audio: {
+        noiseSuppression: true,
+        echoCancellation: true,
+        volume: 20,
+        deviceId: deviceId,
+      },
+    };
+
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+
+    streamRef.current = stream;
+    // console.log(stream.getAudioTracks());
+  } catch (err) {
+    // console.log('마이크 액세스에 실패했습니다.', err);
+  }
+}

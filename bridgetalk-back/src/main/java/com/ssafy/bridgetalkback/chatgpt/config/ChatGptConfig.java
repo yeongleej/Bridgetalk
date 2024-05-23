@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d43bdb3826ac25e0ae4dc41a67eb7c5f47d4815c2f88ef4b6f63fe9eebf9c8c6
-size 799
+package com.ssafy.bridgetalkback.chatgpt.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.web.client.RestTemplate;
+
+@Configuration
+public class ChatGptConfig {
+
+    @Value("${OPENAI_SECRET_KEY}")
+    private String secretKey;
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+    @Bean
+    public HttpHeaders httpHeaders() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setBearerAuth(secretKey);
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        return headers;
+    }
+
+}

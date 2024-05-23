@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6687afa3cd5b580db126a5ea87fdd79169e657932ff3548f6ac749ab50e6d94e
-size 765
+package com.ssafy.bridgetalkback.notification.config;
+
+import com.ssafy.bridgetalkback.notification.dto.request.NotificationRequestDto;
+import com.ssafy.bridgetalkback.notification.service.NotificationService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.event.TransactionalEventListener;
+
+@Component
+@RequiredArgsConstructor
+public class NotificationListener {
+
+    private final NotificationService notificationService;
+
+    @TransactionalEventListener
+    @Async
+    public void handleNotification(NotificationRequestDto notificationRequestDto) {
+        notificationService.sendNotification(notificationRequestDto);
+    }
+}

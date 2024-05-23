@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8b465e6ec612e0d374513d651760448b487d4055e72b5217a1a7a6c2bf6c29cd
-size 854
+package com.ssafy.bridgetalkback.global.exception;
+
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
+public class ErrorResponse {
+    private int status;
+    private String errorCode;
+    private String message;
+
+    private ErrorResponse(ErrorCode code) {
+        this.status = code.getStatus().value();
+        this.errorCode = code.getErrorCode();
+        this.message = code.getMessage();
+    }
+
+    public static ErrorResponse from(ErrorCode errorCode){
+        return new ErrorResponse(errorCode);
+    }
+
+    public static ErrorResponse of(ErrorCode errorCode, String message) {
+        return new ErrorResponse(errorCode.getStatus().value(),
+                errorCode.getErrorCode(), message);
+    }
+}

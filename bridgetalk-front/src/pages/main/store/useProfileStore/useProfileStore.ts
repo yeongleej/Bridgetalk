@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d99c387691d7f8e349ba0c8319829e695d106768c4c4a47d86c0d33117c260fc
-size 880
+import { create } from 'zustand';
+
+interface Store {
+  deleteModalOpenState: any;
+  setDeleteModalOpenState: any;
+  passwordCheckModalState: any;
+  setPasswordCheckModalState: any;
+  editProfileModalState: any;
+  setEditProfileModalState: any;
+  deleteProfileModalState: any;
+  setDeleteProfileModalState: any;
+}
+
+export const useProfileStore = create<Store>()((set) => ({
+  deleteModalOpenState: false,
+  setDeleteModalOpenState: (deleteModalState: any) =>
+    set({
+      deleteModalOpenState: deleteModalState,
+    }),
+  passwordCheckModalState: false,
+  setPasswordCheckModalState: (state: []) => set({ passwordCheckModalState: state }),
+  editProfileModalState: false,
+  setEditProfileModalState: (state: any) => set({ editProfileModalState: state }),
+  deleteProfileModalState: false,
+  setDeleteProfileModalState: (state: any) => set({ deleteModalOpenState: state }),
+}));

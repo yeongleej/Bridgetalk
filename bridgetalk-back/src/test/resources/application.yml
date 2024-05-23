@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:823c78dc7640109ebcae5efd87e67484569d07f33734bfcede122aeb5cae1b7f
-size 810
+spring:
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    show_sql: true
+    properties:
+      hibernate: dialect=org.hibernate.dialect.MySQL8Dialect
+      dialect:
+        storage_engine: innodb
+    open-in-view: false
+  datasource:
+    hikari:
+      jdbc-url: jdbc:h2:mem:testdb;MODE=MYSQL
+      username: sa
+  profiles:
+    include: secret
+
+  data:
+    redis:
+      host: ${CACHE_REDIS_HOST}
+      port: ${CACHE_REDIS_PORT}
+      password: ${CACHE_REDIS_PASSWORD}
+
+  # SMTP
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connection timeout: 5000
+          timeout: 5000
+          write timeout: 5000

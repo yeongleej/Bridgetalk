@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:71d78937db35c77def1448633569e0fa88fb846ec59a0332c88b910f4106e6cf
-size 686
+package com.ssafy.bridgetalkback.boards.repository;
+
+import com.ssafy.bridgetalkback.boards.domain.Boards;
+import com.ssafy.bridgetalkback.boards.query.BoardsListQueryRepository;
+import com.ssafy.bridgetalkback.reports.domain.Reports;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface BoardsRepository extends JpaRepository<Boards, Long>, BoardsListQueryRepository {
+    Optional<Boards> findBoardsByBoardsIdAndIsDeleted(Long boardsId, int isDeleted);
+
+    boolean existsBoardsByReportsReportsIdAndIsDeleted(Long reportsId, int isDeleted);
+
+    Optional<Boards> findBoardsByReportsAndIsDeleted(Reports reports, int isDeleted);
+}

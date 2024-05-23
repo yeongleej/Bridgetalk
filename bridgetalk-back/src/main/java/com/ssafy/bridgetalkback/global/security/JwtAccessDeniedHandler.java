@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:012a4d4421000958cd24b37f638933d07b8d618745286f1c72633b600c3964b2
-size 905
+package com.ssafy.bridgetalkback.global.security;
+
+import com.ssafy.bridgetalkback.global.exception.BaseException;
+import com.ssafy.bridgetalkback.global.exception.GlobalErrorCode;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.stereotype.Component;
+
+@Slf4j
+@Component
+public class JwtAccessDeniedHandler implements AccessDeniedHandler {
+    @Override
+    public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) {
+        log.info("{ JwtAccessDeniedHandler } : 토큰 없음. 토큰 필요");
+        throw BaseException.type(GlobalErrorCode.INVALID_USER); // 필요한 권한 x -> 403
+    }
+}

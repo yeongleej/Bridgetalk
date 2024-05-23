@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8e5d70bd367d75d1ba96bcaef2b21de6b15fef7b81a3c02cd7d087acc74faa7f
-size 591
+import { create } from 'zustand';
+
+interface Store {
+  audioBlob: Blob | null;
+  setAudioBlob: (audioBlob: Blob) => void;
+
+  volume: number;
+  setVolume: (volume: number) => void;
+
+  isRecordFinished: boolean;
+  setIsRecordFinished: (status: boolean) => void;
+}
+
+export const useVoiceStore = create<Store>()((set) => ({
+  audioBlob: null,
+  setAudioBlob: (audioBlob: Blob) => set({ audioBlob: audioBlob }),
+
+  volume: 0,
+  setVolume: (volume: number) => set({ volume: volume }),
+
+  isRecordFinished: false,
+  setIsRecordFinished: (status: boolean) => set({ isRecordFinished: status }),
+}));

@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:69d5792038703e85fb5ff16fe7762b66a3c48bc8214cf1cc0d591a1948a06787
-size 1123
+package com.ssafy.bridgetalkback.boards.query;
+
+import com.ssafy.bridgetalkback.boards.domain.BoardsSearchType;
+import com.ssafy.bridgetalkback.boards.dto.response.BoardsListResponseDto;
+import com.ssafy.bridgetalkback.boards.dto.response.CustomBoardsListResponseDto;
+import com.ssafy.bridgetalkback.boards.query.dto.BoardsListDto;
+import com.ssafy.bridgetalkback.global.Language;
+import com.ssafy.bridgetalkback.parents.domain.Parents;
+
+public interface BoardsListQueryRepository {
+    CustomBoardsListResponseDto<BoardsListDto> getBoardsListOrderByTime(int page, BoardsSearchType boardSearchType,
+                                                                        String searchWord, Language language);
+    CustomBoardsListResponseDto<BoardsListDto> getBoardsListOrderByLikes(int page, BoardsSearchType boardSearchType,
+                                                                         String searchWord, Language language);
+
+    BoardsListResponseDto getMyBoardsListOrderByTime(Parents parents, Language language);
+    BoardsListResponseDto getMyBoardsListOrderByLikes(Parents parents, Language language);
+}

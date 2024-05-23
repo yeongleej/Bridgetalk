@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0cd53cb420f32b4bdaf39f24d135911b10fe78f86a11023d83bb6262b4d70de9
-size 612
+package com.ssafy.bridgetalkback.kids.repository;
+
+import com.ssafy.bridgetalkback.kids.domain.Kids;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface KidsRepository extends JpaRepository<Kids, UUID> {
+    Optional<Kids> findKidsByUuidAndIsDeleted(UUID uuid, int isDeleted);
+
+    Optional<Kids> findByKidsEmailAndIsDeleted(String kidsEmail, int isDeleted);
+
+    boolean existsKidsByUuidAndIsDeleted(UUID uuid, int isDeleted);
+
+    boolean existsKidsByParentsUuidAndUuidAndIsDeleted(UUID parents_uuid, UUID uuid, int isDeleted);
+
+}

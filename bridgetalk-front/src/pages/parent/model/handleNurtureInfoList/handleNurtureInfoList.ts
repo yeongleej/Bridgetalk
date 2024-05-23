@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:797742929c6645b5de21748078607446b8b7c30196f85bd980fbe6ae3b68f364
-size 586
+import { getNurtureInfoList } from '../../query';
+
+export async function handleNurtureInfoList(
+  language: 'kor' | 'viet' | 'ph',
+  setInfoList: any,
+  page: number,
+  setLastPage: any,
+  searchCategory?: '' | 'prospective' | 'infant_and_toddler' | 'school' | 'puberty',
+) {
+  try {
+    const fetchData = await getNurtureInfoList(language, page, searchCategory);
+
+    setInfoList(fetchData.data.parentingInfoList);
+    setLastPage(fetchData.data.pageInfo.totalPages);
+    // console.log('{handleNurtureInfoList: fetchData', fetchData);
+  } catch (err) {
+    // console.log(err);
+  }
+}

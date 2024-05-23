@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6017bd8f8fe51e91c38dc1c625a0f1b5b347155356cd73c14a4569fd8c8fb9cf
-size 838
+import { MutableRefObject } from 'react';
+
+interface AudioContext {
+  analyser: AnalyserNode;
+  bufferLength: number;
+  dataArray: Uint8Array;
+}
+
+export function generateAudioContext(streamRef: MutableRefObject<MediaStream | null>): AudioContext | undefined {
+  if (streamRef.current) {
+    const audioContext = new AudioContext();
+    const analyser: AnalyserNode = audioContext.createAnalyser();
+    const microphone = audioContext.createMediaStreamSource(streamRef.current);
+    microphone.connect(analyser);
+    analyser.fftSize = 256;
+
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray: Uint8Array = new Uint8Array(bufferLength);
+
+    if (analyser instanceof AnalyserNode && typeof bufferLength === 'number' && dataArray instanceof Uint8Array) {
+      return { analyser, bufferLength, dataArray };
+    }
+  }
+}

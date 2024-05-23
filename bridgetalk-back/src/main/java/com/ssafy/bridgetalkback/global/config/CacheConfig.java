@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4ed4ba821b0792ea1810f6090afb8a29e852187f1aeefe50b13d35b25794dcae
-size 791
+package com.ssafy.bridgetalkback.global.config;
+
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+
+import java.util.List;
+
+@EnableCaching
+@Configuration
+public class CacheConfig {
+
+    @Bean(name = "slangCacheManager")
+    @Primary
+    public CacheManager cacheManager() {
+        ConcurrentMapCacheManager cacheManager = new ConcurrentMapCacheManager();
+        cacheManager.setAllowNullValues(false);
+        cacheManager.setCacheNames(List.of("slangs"));
+        return cacheManager;
+    }
+}

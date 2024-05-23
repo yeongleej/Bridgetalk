@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:77b47cd43e2f36f7cc9dbd692ce5991359b05f4c697d2d671809f752478bd16e
-size 515
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  &:hover {
+    cursor: pointer;
+  }
+
+  .messageListItem {
+    display: flex;
+    align-item: center;
+    justify-content: space-between;
+    padding: 2svh 3svw;
+
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: 0px 10px 10px 0px rgba(255, 255, 255, 0.25) inset, 0px -10px 10px 0px rgba(0, 0, 0, 0.25) inset,
+      0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    * {
+      font-size: 3svh;
+      font-family: 'DNF';
+    }
+  }
+`;

@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:900d6875394c82ba6e7968cf2d7a5eee6d99c0650ed36dc5d775c8883ea06dbe
-size 1049
+// import React from 'react';
+// import './index.less';
+// import ToolPanel from './tool';
+// import ShapePanel from './item/shape';
+// import Divider from '@material-ui/core/Divider';
+// import ThickSelector from './thickSelector';
+// import ColorPanel from './colorPanel';
+// import OtherOperator from './other';
+
+// const Toolbar = (): JSX.Element => {
+//   return (
+//     <div className="toolbar">
+//       <ToolPanel className="toolbar-item" />
+//       <Divider className="divider" orientation="vertical" flexItem />
+//       <ShapePanel className="toolbar-item" />
+//       <Divider className="divider" orientation="vertical" flexItem />
+//       <ThickSelector className="toolbar-item" />
+//       <Divider className="divider" orientation="vertical" flexItem />
+//       <ColorPanel className="toolbar-item" />
+//       <Divider className="divider" orientation="vertical" flexItem />
+//       <OtherOperator />
+//       <Divider className="divider" orientation="vertical" flexItem />
+//     </div>
+//   );
+// };
+
+// export default Toolbar;

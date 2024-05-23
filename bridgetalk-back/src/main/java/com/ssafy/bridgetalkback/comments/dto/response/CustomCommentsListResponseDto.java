@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f0df7632a3fd6093bd6f87ae22e8f4cb68a1e74406ad052b76a53c9f695f7d93
-size 863
+package com.ssafy.bridgetalkback.comments.dto.response;
+
+import org.springframework.data.domain.Page;
+
+import java.util.List;
+
+public record CustomCommentsListResponseDto<T>(
+        CustomCommentsListResponseDto.CustomPageable pageInfo,// pageable
+        List<T> commentsList // content
+) {
+    public CustomCommentsListResponseDto(Page<T> page) {
+        this(
+                new CustomCommentsListResponseDto.CustomPageable(
+                        page.getTotalPages(),
+                        page.getTotalElements(),
+                        page.hasNext(),
+                        page.getNumberOfElements()
+                ),
+                page.getContent()
+        );
+    }
+
+    public record CustomPageable (
+            long totalPages,
+            long totalElements,
+            boolean hasNext,
+            long numberOfElements
+    ) {
+    }
+}
+

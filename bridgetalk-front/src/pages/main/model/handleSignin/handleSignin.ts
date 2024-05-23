@@ -1,3 +1,48 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fcc8f5a473135cb61920fb0f4a4388fddecce13e283d99b5f32c2f5b195b65fc
-size 1712
+import { NavigateFunction } from 'react-router-dom';
+import { postSignin } from '../../query';
+import { errorCatch } from '@/shared';
+
+export function handleSignin(requestDto: any, userStore: any, navigate: NavigateFunction, setErrorModalState: any) {
+  postSignin(requestDto)
+    .then((res: any) => {
+      if (res.status === 200) {
+        const data = res.data;
+        // base64 인코딩
+        localStorage.setItem(
+          btoa('access' + process.env.REACT_APP_SECURE_CODE),
+          btoa(data.accessToken + process.env.REACT_APP_SECURE_CODE),
+        );
+        localStorage.setItem(
+          btoa('refresh' + process.env.REACT_APP_SECURE_CODE),
+          btoa(data.refreshToken + process.env.REACT_APP_SECURE_CODE),
+        );
+        sessionStorage.setItem('dino', data.userDino);
+
+        sessionStorage.setItem(
+          btoa('access' + process.env.REACT_APP_SECURE_CODE),
+          btoa(data.accessToken + process.env.REACT_APP_SECURE_CODE),
+        );
+        sessionStorage.setItem(
+          btoa('refresh' + process.env.REACT_APP_SECURE_CODE),
+          btoa(data.refreshToken + process.env.REACT_APP_SECURE_CODE),
+        );
+
+        localStorage.setItem('language', data.language);
+
+        userStore.setUserId(data.userId);
+        userStore.setUserDino(data.userDino);
+        userStore.setUserEmail(data.userEmail);
+        userStore.setUserName(data.name);
+        userStore.setUserNickname(data.userNickname);
+        userStore.setAccessToken(data.accessToken);
+        userStore.setRefreshToken(data.refreshToken);
+
+        navigate('/profile');
+      }
+    })
+    .catch((err) => {
+      if (err instanceof Error) {
+        errorCatch(err, setErrorModalState);
+      }
+    });
+}

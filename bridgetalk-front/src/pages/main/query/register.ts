@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9476d001890652bd8663468dde7d109d662baa4d81dd7d40a88df878044177c2
-size 764
+// src/hooks/useRegister.ts
+import { useMutation } from 'react-query';
+import { customAxios } from '@/shared';
+import { useUserStore } from '@/pages/main/store/user';
+
+interface RegisterData {
+  parentsEmail: string;
+  parentsPassword: string;
+  parentsName: string;
+  parentsNickname: string;
+  parentsDino: string;
+}
+
+export function useRegister() {
+  const setUserData = useUserStore((state) => state.setUserData);
+
+  return useMutation((data: RegisterData) => customAxios.post(`/api/auth/signup`, data), {
+    onSuccess: (response) => {
+      const { userId, userName, userEmail, userNickname, userDino } = response.data;
+      setUserData({
+        userId,
+        userName,
+        userEmail,
+        userNickname,
+        userDino,
+      });
+    },
+  });
+}

@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3ad8a438c4f56c07455a7d8c30eb5963c63649dd306cb7b0f0da1de3718a9e85
-size 775
+package com.ssafy.bridgetalkback.puzzle.dto.response;
+
+import com.ssafy.bridgetalkback.puzzle.domain.Puzzle;
+import lombok.Builder;
+
+@Builder
+public record PuzzleResponseDto(
+        Long puzzleId,
+        String puzzleNation,
+        String puzzleImageUrl,
+        String puzzleLandmarkName,
+        String puzzleLandmarkContent
+) {
+    public static PuzzleResponseDto from(Puzzle puzzle) {
+        return PuzzleResponseDto.builder()
+                .puzzleId(puzzle.getPuzzleId())
+                .puzzleNation(puzzle.getPuzzleNation())
+                .puzzleImageUrl(puzzle.getPuzzleImageUrl())
+                .puzzleLandmarkName(puzzle.getPuzzleLandmarkName())
+                .puzzleLandmarkContent(puzzle.getPuzzleLandmarkContent())
+                .build();
+    }
+}

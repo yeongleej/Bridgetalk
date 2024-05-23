@@ -1,3 +1,50 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:050994d7189d4b4ac54561a08dede38300d0202115d585a271b69f7674def87d
-size 1471
+import { useNavigate } from 'react-router-dom';
+import * as S from '@/styles/child/game/game.style';
+
+export function GamingPage() {
+  const navigate = useNavigate();
+
+  return (
+    <S.Container>
+      <div className="gamingPage">
+        <div className="gamingPage__header">
+          <div className="gamingPage__header-toHome">
+            <img
+              src="/assets/img/child/game/toHome.svg"
+              alt=""
+              onClick={() => {
+                navigate('/child');
+              }}
+            />
+          </div>
+          <div className="gamingPage__header-title">
+            <img src="/assets/img/child/game/gameTitle.svg" alt="" />
+          </div>
+          <div className="gamingPage__header-toHelp">
+            <img src="/assets/img/child/game/toHelp.svg" alt="" />
+          </div>
+        </div>
+        <div className="gamingPage__container">
+          <div className="gamingPage__container-toPuzzle">
+            <img
+              src="/assets/img/child/game/toPuzzle.svg"
+              alt=""
+              onClick={() => {
+                navigate('/stage');
+              }}
+            />
+          </div>
+          <div className="gamingPage__container-toPuzzle">
+            <img
+              src="/assets/img/child/game/toDress.svg"
+              alt=""
+              onClick={() => {
+                navigate('/dress');
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </S.Container>
+  );
+}

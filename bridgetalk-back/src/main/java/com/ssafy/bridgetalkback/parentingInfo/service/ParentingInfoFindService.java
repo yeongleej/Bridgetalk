@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9f11df11e1b862bd35fecce2b8062555e63562d9eaff9b59b6805fa3c6167787
-size 1095
+package com.ssafy.bridgetalkback.parentingInfo.service;
+
+import com.ssafy.bridgetalkback.global.exception.BaseException;
+import com.ssafy.bridgetalkback.parentingInfo.domain.ParentingInfo;
+import com.ssafy.bridgetalkback.parentingInfo.exception.ParentingInfoErrorCode;
+import com.ssafy.bridgetalkback.parentingInfo.repository.ParentingInfoRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Slf4j
+@Service
+@Transactional(readOnly = true)
+@RequiredArgsConstructor
+public class ParentingInfoFindService {
+    private final ParentingInfoRepository parentingInfoRepository;
+
+    public ParentingInfo findParentingInfoByParentingInfoIdAndIsDeleted(Long id) {
+        log.info("{ ParentingInfoFindService } : Id(Pk)로 육아 정보 조회 - "+id);
+        return parentingInfoRepository.findParentingInfoByParentingInfoIdAndIsDeleted(id, 0)
+                .orElseThrow(() -> BaseException.type(ParentingInfoErrorCode.PARENTINGINFO_NOT_FOUND));
+    }
+}

@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d82e6b0cec40d9ceab1ea548d0cc3dc11756c14326fa1353156bfc49b932ab1b
-size 780
+export function WarningPage() {
+  return (
+    <div className="warningPage">
+      <div className="warningPage__alert">
+        <div className="warningPage__alert-message">
+          <p>
+            잠깐! 대화 도중에 나가면 대화 기록이 저장되지 않아!
+            <br />
+            그래도 대화를 마무리하지 않고 그냥 나갈래?
+          </p>
+        </div>
+        <div className="warningPage__alert-dino">
+
+        </div>
+      </div>
+      <div className="warningPage__select">
+        <div className="warningPage__select-btn">그냥 나가기</div>
+        <div className="warningPage__select-btn">대화 저장하고 나가기</div>
+        <div className="warningPage__select-btn">계속 대화하기</div>
+      </div>
+    </div>
+  );
+}

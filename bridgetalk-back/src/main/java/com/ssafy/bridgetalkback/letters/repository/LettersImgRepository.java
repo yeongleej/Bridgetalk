@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:39614f125fa36686e67a61792eb780267b8cfdce837e98530e0148d48e8f502b
-size 528
+package com.ssafy.bridgetalkback.letters.repository;
+
+import com.ssafy.bridgetalkback.letters.domain.LettersImg;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface LettersImgRepository extends JpaRepository<LettersImg, Long> {
+//    List<LettersImg> findAllByLettersAndIsDeleted(Letters letters, int isDeleted);
+
+    Optional<LettersImg> findLettersImgByKeywordAndIsDeleted(String keyword, int isDeleted);
+
+}

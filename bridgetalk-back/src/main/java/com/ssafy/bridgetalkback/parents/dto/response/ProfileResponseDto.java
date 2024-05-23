@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:948638f1011694f622a00801e8d19e258d7ea6ec4da1ab2ecad2920a84a7943e
-size 1179
+package com.ssafy.bridgetalkback.parents.dto.response;
+
+import com.ssafy.bridgetalkback.kids.domain.Kids;
+import com.ssafy.bridgetalkback.parents.domain.Parents;
+import lombok.Builder;
+
+@Builder
+public record ProfileResponseDto(
+        String userId,
+        String userName,
+        String userEmail,
+        String userNickname,
+        String userDino
+) {
+    public static ProfileResponseDto fromParents(Parents parents) {
+        return ProfileResponseDto.builder()
+                .userId(String.valueOf(parents.getUuid()))
+                .userName(parents.getParentsName())
+                .userEmail(parents.getParentsEmail().getValue())
+                .userNickname(parents.getParentsNickname())
+                .userDino(parents.getParentsDino())
+                .build();
+    }
+
+    public static ProfileResponseDto fromKids(Kids kids) {
+        return ProfileResponseDto.builder()
+                .userId(String.valueOf(kids.getUuid()))
+                .userName(kids.getKidsName())
+                .userEmail(kids.getKidsEmail())
+                .userNickname(kids.getKidsNickname())
+                .userDino(kids.getKidsDino())
+                .build();
+    }
+}

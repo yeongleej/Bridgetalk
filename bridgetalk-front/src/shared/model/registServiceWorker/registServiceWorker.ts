@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cd34832d78f66f59905adec6b5417214ee55b4340628ab0b56ec5a6752cb3297
-size 960
+export function registServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('/serviceWorker.js')
+      .then(
+        (res) =>
+          (res.onupdatefound = () => {
+            const installingWorker = res.installing;
+
+            if (!installingWorker) return;
+
+            installingWorker.onstatechange = () => {
+              if (installingWorker.state === 'installed') {
+                if (navigator.serviceWorker.controller) {
+                  // 새로운 콘텐츠가 사용 가능함을 사용자에게 알림
+                  // console.log('New content is available; please refresh.');
+                } else {
+                  // 콘텐츠가 캐시되었음을 사용자에게 알림
+                  // console.log('Content is cached for offline use.');
+                }
+              }
+            };
+          }),
+      )
+      .catch((err) => {
+        // console.log(err);
+      });
+  }
+}

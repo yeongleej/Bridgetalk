@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cb5994a81040c1e122adc84193f717c107c984b273d1007cbcc21ba7333f28f2
-size 833
+package com.ssafy.bridgetalkback.global;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.EntityListeners;
+import jakarta.persistence.MappedSuperclass;
+import lombok.Getter;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import java.time.LocalDateTime;
+
+@Getter
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
+public class BaseEntity {
+    @CreatedDate
+    private LocalDateTime createdAt;
+
+    @LastModifiedDate
+    private LocalDateTime modifiedAt;
+
+    @Column(columnDefinition = "integer default 0")
+    private int isDeleted;
+
+    public void updateIsDeleted() {
+        if (this.isDeleted == 0) {
+            this.isDeleted = 1;
+        }
+    }
+}
+
+
+
