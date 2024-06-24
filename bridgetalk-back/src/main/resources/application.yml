@@ -1,0 +1,87 @@
+server:
+  port: 8081
+
+spring:
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: dialect=org.hibernate.dialect.MySQL8Dialect
+    open-in-view: false
+
+  profiles:
+    include: secret
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${EC2_HOST}:3306/${DATABASE_NAME}?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: ${EC2_USERNAME}
+    password: ${EC2_PASSWORD}
+
+  servlet:
+    multipart:
+      max-file-size: 20MB # 최대 파일 사이즈
+      max-request-size: 20MB # 최대 요청 사이즈
+
+  # aws s3
+  cloud:
+    aws:
+      credentials:
+        access-key: ${S3_ACCESS_KEY}
+        secret-key: ${S3_SECRET_KEY}
+      s3:
+        bucket: ${S3_BUCKET_NAME}
+      region:
+        static: ${S3_REGION_STATIC}
+      stack:
+        auto: false
+
+  cache:
+    type: redis
+  data:
+    redis:
+      host: ${CACHE_REDIS_HOST}
+      port: ${CACHE_REDIS_PORT}
+      password: ${CACHE_REDIS_PASSWORD}
+
+  # SMTP
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connection timeout: 5000
+          timeout: 5000
+          write timeout: 5000
+
+# swagger 설정
+springdoc:
+  swagger-ui:
+    groups-order: desc
+    tags-sorter: alpha
+    operations-sorter: method
+    disable-swagger-default-url: true
+    display-request-duration: true
+    default-models-expand-depth: 2
+    default-model-expand-depth: 2
+  api-docs:
+    path: /api-docs
+  show-actuator: true
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  writer-with-default-pretty-printer: true
+  model-and-view-allowed: true
+  paths-to-match:
+    - /api/**
